@@ -11,7 +11,7 @@ def solution(num_list):
     return -1
 ```
 
--리스트 자르기
+리스트 자르기
 ```python
 def solution(n, slicer, num_list):
     answer = []
