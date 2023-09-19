@@ -2,6 +2,24 @@
 
 #2023.09.15(화)
 <br>
+
+길이에 따른 연산
+```python
+def solution(num_list):
+    answer = 0
+    n = len(num_list)
+    if n >= 11:
+        for i in num_list:
+            answer += i
+    elif n <= 10:
+        answer = 1
+        for i in num_list:
+            answer *= i
+    return answer
+```
+=> 누적합이나 누적곱을 구할때는 sum(), prod()를 사용하면 편하다.
+prod() 는 math 모듈을 임포트해야한다.
+
 첫 번째로 나오는 음수
 ```python
 def solution(num_list):
