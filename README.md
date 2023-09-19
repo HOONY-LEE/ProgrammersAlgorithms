@@ -1,7 +1,7 @@
 # ProgrammersAlgorithms
 
 #2023.09.15(화)
-*첫 번째로 나오는 음수
+-첫 번째로 나오는 음수
 ```python
 def solution(num_list):
     for i in range(len(num_list)):
@@ -10,7 +10,7 @@ def solution(num_list):
     return -1
 ```
 
-*리스트 자르기
+-리스트 자르기
 ```python
 def solution(n, slicer, num_list):
     answer = []
