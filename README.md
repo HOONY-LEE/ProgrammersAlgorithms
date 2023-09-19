@@ -2,6 +2,7 @@
 
 #2023.09.15(화)
 
+```python
 def solution(n, slicer, num_list):
     answer = []
     a, b, c = slicer[0], slicer[1], slicer[2]
@@ -15,6 +16,7 @@ def solution(n, slicer, num_list):
     elif n==4:
         answer = num_list[a:b+1:c]
     return answer
+```
 => 파이썬에서 배열에 있는 값(ITERABLE)을 변수에 담을 때는 편하게 a, b, c = slicer(배열) 이렇게 넣어줄 수 있다는걸 몰랐다.
 자바스크립트 스프레드문법이랑 비슷한 것 같다.  
 
