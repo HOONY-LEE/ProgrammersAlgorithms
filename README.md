@@ -1,7 +1,7 @@
 # ProgrammersAlgorithms
 
-#2023.09.15(화)
--첫 번째로 나오는 음수
+#2023.09.15(화)<br>
+첫 번째로 나오는 음수
 ```python
 def solution(num_list):
     for i in range(len(num_list)):
