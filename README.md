@@ -1,5 +1,29 @@
 # ProgrammersAlgorithms
 
+#2023.09.17(목)
+<br>
+2의 영역
+```python
+def solution(arr):
+    arr2 = list(reversed(arr))
+    leng = len(arr)
+    si = 0;
+    ei = leng
+    
+    if not(2 in arr):
+        return [-1]
+    for i in range(leng):
+        if arr[i] == 2:
+            si = i
+            break    
+    for i in range(leng):      
+        if arr2[i] == 2:
+            ei = leng - i
+            break
+    return arr[si:ei]
+```
+
+
 #2023.09.16(수)
 <br>
 조건에 맞게 수열 변환하기3
