@@ -2,6 +2,19 @@
 
 #2023.09.17(목)
 <br>
+왼쪽 오른쪽
+```python
+def solution(str_list):
+    for index, value in enumerate(str_list):
+        if value == 'l':
+            
+            return str_list[:index]
+        elif value == 'r':
+            return str_list[index+1:]
+    return []
+```
+
+
 배열조각하기
 ```python
 def solution(arr, query):
