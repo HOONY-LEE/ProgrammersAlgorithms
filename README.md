@@ -2,6 +2,22 @@
 
 #2023.09.17(목)
 <br>
+배열조각하기
+```python
+def solution(arr, query):
+    answer = []
+    for i in range(len(query)):
+        if i%2 == 0:
+            arr = arr[:query[i]+1]
+        else:
+            arr = arr[query[i]:]
+    return arr
+```
+=> index와 각 요소들을 for문을 통해서 꺼낼때 파이썬의 내장함수 enumerate()를 사용하면 편하다.
+for i, item in enumerate(arr):
+    print(i, item)
+의 형태로 사용할 수 있다.
+
 2의 영역
 ```python
 def solution(arr):
