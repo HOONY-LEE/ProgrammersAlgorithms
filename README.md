@@ -32,7 +32,6 @@ def solution(str_list):
             return str_list[index+1:]
     return []
 ```
-<br>
 
 배열조각하기
 ```python
@@ -49,7 +48,7 @@ def solution(arr, query):
 for i, item in enumerate(arr):
     print(i, item)
 의 형태로 사용할 수 있다.
-<br>
+
 
 <br>
 2의 영역
@@ -72,12 +71,14 @@ def solution(arr):
             break
     return arr[si:ei]
 ```
-<br>
+
+
 
 
 #2023.09.16(수)
 <br>
 조건에 맞게 수열 변환하기3
+
 ```python
 def solution(arr, k):
     if k%2:
@@ -88,7 +89,7 @@ def solution(arr, k):
             arr[i] += k
     return arr
 ```
-<br>
+
 
 <br>
 n번째 원소부터
@@ -96,7 +97,6 @@ n번째 원소부터
 def solution(num_list, n):
     return num_list[n-1:]
 ```
-<br>
 
 
 #2023.09.15(화)
