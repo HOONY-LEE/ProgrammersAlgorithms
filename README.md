@@ -7,6 +7,7 @@
 
 <br>
 수열과 구간 쿼리1
+
 ```python
 def solution(arr, queries):
     for i in range(len(queries)):
@@ -15,7 +16,7 @@ def solution(arr, queries):
             arr[j] += 1
     return arr
 ```
-<br>
+
 
 
 #2023.09.17(목)
