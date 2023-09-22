@@ -50,7 +50,7 @@ for i, item in enumerate(arr):
 의 형태로 사용할 수 있다.
 
 
-<br>
+
 2의 영역
 ```python
 def solution(arr):
@@ -119,7 +119,7 @@ def solution(num_list):
 prod() 는 math 모듈을 임포트해야한다.
 <br>
 
-<br>
+
 첫 번째로 나오는 음수
 ```python
 def solution(num_list):
@@ -130,7 +130,6 @@ def solution(num_list):
 ```
 <br>
 
-<br>
 리스트 자르기
 ```python
 def solution(n, slicer, num_list):
