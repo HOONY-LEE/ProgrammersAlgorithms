@@ -1,5 +1,28 @@
 # ProgrammersAlgorithms
 
+#2023.09.18(금)
+
+
+<br>
+문제를 입력하세요
+```python
+
+```
+<br>
+
+<br>
+수열과 구간 쿼리1
+```python
+def solution(arr, queries):
+    for i in range(len(queries)):
+        s, e = queries[i][0], queries[i][1]
+        for j in range(s, e+1):
+            arr[j] += 1
+    return arr
+```
+<br>
+
+
 #2023.09.17(목)
 <br>
 왼쪽 오른쪽
@@ -13,7 +36,7 @@ def solution(str_list):
             return str_list[index+1:]
     return []
 ```
-
+<br>
 
 배열조각하기
 ```python
@@ -30,7 +53,9 @@ def solution(arr, query):
 for i, item in enumerate(arr):
     print(i, item)
 의 형태로 사용할 수 있다.
+<br>
 
+<br>
 2의 영역
 ```python
 def solution(arr):
@@ -51,6 +76,7 @@ def solution(arr):
             break
     return arr[si:ei]
 ```
+<br>
 
 
 #2023.09.16(수)
@@ -66,17 +92,19 @@ def solution(arr, k):
             arr[i] += k
     return arr
 ```
+<br>
+
+<br>
 n번째 원소부터
 ```python
 def solution(num_list, n):
     return num_list[n-1:]
 ```
-
+<br>
 
 
 #2023.09.15(화)
 <br>
-
 길이에 따른 연산
 ```python
 def solution(num_list):
@@ -93,7 +121,9 @@ def solution(num_list):
 ```
 => 누적합이나 누적곱을 구할때는 sum(), prod()를 사용하면 편하다.
 prod() 는 math 모듈을 임포트해야한다.
+<br>
 
+<br>
 첫 번째로 나오는 음수
 ```python
 def solution(num_list):
@@ -102,7 +132,9 @@ def solution(num_list):
             return i
     return -1
 ```
+<br>
 
+<br>
 리스트 자르기
 ```python
 def solution(n, slicer, num_list):
@@ -121,7 +153,7 @@ def solution(n, slicer, num_list):
 ```
 => 파이썬에서 배열에 있는 값(ITERABLE)을 변수에 담을 때는 편하게 a, b, c = slicer(배열) 이렇게 넣어줄 수 있다는걸 몰랐다.
 자바스크립트 스프레드문법이랑 비슷한 것 같다.  
-
+<br>
 
 
 #2023.09.09(토)
