@@ -1,6 +1,29 @@
 # ProgrammersAlgorithms
 
-#2023.09.18(금)
+
+#2023.09.23(토)
+
+<br>
+수열과 구간 쿼리1
+
+```python
+def solution(num_list):
+    answer = 0
+    for i in num_list:
+        num = i
+        while num!=1:
+            if num%2==0:
+                num = num/2
+            else:
+                num = (num-1)/2
+            answer += 1
+    return answer
+```
+
+
+
+
+#2023.09.22(금)
 
 
 
@@ -19,7 +42,7 @@ def solution(arr, queries):
 
 
 
-#2023.09.17(목)
+#2023.09.21(목)
 <br>
 왼쪽 오른쪽
 ```python
@@ -75,7 +98,7 @@ def solution(arr):
 
 
 
-#2023.09.16(수)
+#2023.09.20(수)
 <br>
 조건에 맞게 수열 변환하기3
 
@@ -99,7 +122,7 @@ def solution(num_list, n):
 ```
 
 
-#2023.09.15(화)
+#2023.09.19(화)
 <br>
 길이에 따른 연산
 ```python
