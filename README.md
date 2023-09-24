@@ -1,4 +1,19 @@
 # ProgrammersAlgorithms
+#2023.09.23(토)
+
+<br>
+배열에서 문자열 대소문자 변환하기
+
+```python
+def solution(strArr):
+    answer = []
+    for i, value in enumerate(strArr):
+        if i%2==0:
+            answer.append(value.lower())
+        else:
+            answer.append(value.upper())
+    return answer
+```
 
 
 #2023.09.23(토)
