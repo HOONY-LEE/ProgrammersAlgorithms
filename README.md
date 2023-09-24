@@ -2,6 +2,14 @@
 #2023.09.24(일)
 
 <br>
+A 강조하기
+
+```python
+def solution(myString):
+    return myString.lower().replace('a','A')
+```
+
+<br>
 배열에서 문자열 대소문자 변환하기
 
 ```python
