@@ -1,14 +1,22 @@
 # ProgrammersAlgorithms
-
+<br>
 #2023.09.26(화)
 
 <br>
-제목
-
+빈 배열 추가 삭제하기
 ```python
-
+def solution(arr, flag):
+    answer = []
+    for i in range(len(arr)):
+        if flag[i]:
+            for j in range(arr[i]*2):
+                answer.append(arr[i])
+        else:
+            for j in range(arr[i]):
+                answer.pop()
+    return answer
 ```
-
+<br>
 #2023.09.25(월)
 
 <br>
