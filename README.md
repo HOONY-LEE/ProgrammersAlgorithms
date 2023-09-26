@@ -1,9 +1,9 @@
 # ProgrammersAlgorithms
 
-#2023.09.26(화)
+#2023.09.25(월)
 
 <br>
-빈 배열 추가 삭제하기
+빈 배열에 추가, 삭제하기
 
 ```python
 def solution(arr, flag):
