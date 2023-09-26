@@ -4,6 +4,7 @@
 
 <br>
 빈 배열 추가 삭제하기
+
 ```python
 def solution(arr, flag):
     answer = []
@@ -16,6 +17,7 @@ def solution(arr, flag):
                 answer.pop()
     return answer
 ```
+
 
 #2023.09.25(월)
 
