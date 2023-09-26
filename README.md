@@ -16,7 +16,7 @@ def solution(arr, flag):
                 answer.pop()
     return answer
 ```
-<br>
+
 #2023.09.25(월)
 
 <br>
