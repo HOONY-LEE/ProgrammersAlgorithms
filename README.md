@@ -1,4 +1,26 @@
 # ProgrammersAlgorithms
+
+#2023.09.25(월)
+
+<br>
+조건에 맞게 수열 변환하기2
+
+```python
+def solution(arr):
+    answer = 0
+    while True:
+        before = arr.copy()
+        for i,value in enumerate(arr):
+            if value>=50 and value%2==0:
+                arr[i] = arr[i]/2
+            elif value<50 and value%2==1:
+                arr[i] = (arr[i]*2)+1    
+        if before == arr:
+            break
+        answer += 1 
+    return answer
+```
+
 #2023.09.24(일)
 
 <br>
