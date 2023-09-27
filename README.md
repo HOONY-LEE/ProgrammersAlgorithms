@@ -3,15 +3,16 @@
 #2023.09.27(수)
 
 <br>
-문자열이 몇 번 등장하는지 세기
+문자열 잘라서 정렬하기
 
 ```python
-def solution(myString, pat):
-    answer = 0
-    length = len(pat)
-    for i in range(len(myString)):
-        if myString[i:i+length] == pat:
-            answer += 1
+def solution(myString):
+    answer = []
+    tmp = myString.split('x')
+    for i in tmp:
+        if i != '':
+            answer.append(i)
+    answer.sort()
     return answer
 ```
 
