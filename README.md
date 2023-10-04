@@ -1,5 +1,21 @@
 # ProgrammersAlgorithms
-  
+
+
+## 2023.10.4(수)
+
+<br>
+문자열 잘라서 정렬하기
+
+```python
+def solution(myStr):
+    answer = myStr.replace('a',' ').replace('b', ' ').replace('c',' ').strip().split(' ')
+    result = [i for i in answer if i != '']
+    if result == []:
+        result = ['EMPTY']
+    return result
+```
+
+
 ## 2023.09.27(수)
 
 <br>
