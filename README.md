@@ -33,15 +33,17 @@ def solution(arr, k):
 쉬운문제를 쓸데없이 어렵게 생각했다.
 변경후
 ```python
-def solution(arr, n):
-    leng = len(arr)
-    if leng%2==0:
-        for i in range(1,leng,2):
-            arr[i] += n
-    else:
-        for i in range(0,leng,2):
-            arr[i] += n
-    return arr
+def solution(arr, k):
+    answer = []
+    for i in arr:
+        if i not in answer:
+            answer.append(i)
+        if len(answer) == k:
+            break
+    if len(answer) < k:
+        for i in range(k-len(answer)):
+            answer.append(-1)
+    return answer
 ```
 
 
