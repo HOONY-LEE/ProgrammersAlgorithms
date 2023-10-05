@@ -4,6 +4,48 @@
 ## 2023.10.5(목)
 
 <br>
+무작위로 K개의 수 뽑기
+
+```python
+def solution(arr, k):
+    answer = []
+    leng = len(arr)
+
+    for i in range(leng):
+        if i == 0:
+            answer.append(arr[i])
+        else:
+            flag = True
+            for j in range(len(answer)):
+                if arr[i] == answer[j]:
+                    print('같은값 : ', arr[i])
+                    flag = False
+                    break
+            if flag:
+                answer.append(arr[i])
+        if len(answer) == k:
+            break
+    if len(answer) < k:
+        for i in range(k-len(answer)):
+            answer.append(-1)
+    return answer
+```
+쉬운문제를 쓸데없이 어렵게 생각했다.
+변경후
+```python
+def solution(arr, n):
+    leng = len(arr)
+    if leng%2==0:
+        for i in range(1,leng,2):
+            arr[i] += n
+    else:
+        for i in range(0,leng,2):
+            arr[i] += n
+    return arr
+```
+
+
+<br>
 배열의 길이에 따라 다른 연산하기
 
 ```python
