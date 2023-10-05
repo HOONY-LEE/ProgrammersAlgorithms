@@ -4,6 +4,20 @@
 ## 2023.10.5(목)
 
 <br>
+배열의 길이를 2의 거듭제곱으로 만들기
+
+```python
+import math
+
+def solution(arr):
+    n = int(math.pow(2,math.ceil(math.log2(len(arr)))))
+    if len(arr) < n:
+        for i in range(n - len(arr)):
+            arr.append(0)
+    return arr
+```
+
+<br>
 무작위로 K개의 수 뽑기
 
 ```python
