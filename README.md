@@ -4,10 +4,26 @@
 ## 2023.10.5(목)
 
 <br>
-제목
+배열만들기 6
 
 ```python
-function
+def solution(arr):
+    answer = []
+    i = 0
+    while i<len(arr):
+        leng = len(answer)
+        if leng == 0:
+            answer.append(arr[i])
+            i+=1
+        elif answer[leng-1] == arr[i]:
+            del answer[leng-1]
+            i+=1
+        else:
+            answer.append(arr[i])
+            i+=1
+    if len(answer) == 0:
+        return [-1]
+    return answer
 ```
 
 
