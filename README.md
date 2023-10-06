@@ -3,6 +3,41 @@
 
 ## 2023.10.6(금)
 
+
+<br>
+전국 대회 선발 고사
+
+```python
+def solution(rank, attendance):
+    answer = 0
+    # 1. arr 최소값 찾기
+    # 2. 참석여부 검사
+    # 3. 배열에 추가하고 해당 rank[i] 값 높게 변경
+    arr = []
+    while len(arr) < 3 :
+        idx = rank.index(min(rank))
+        if attendance[idx]:
+            arr.append(idx)
+            rank[idx] = 101
+        else:
+            rank[idx] = 101
+    a, b, c = arr
+    return 10000*a + 100*b + c
+```
+튜플 자료형을 활용하면 좀 더 쉽게 풀 수 있던 문제 같다.
+다음은 튜플을 통한 리펙토링
+```python
+def solution(rank, attendance):
+    arr = []
+    for i, attend in enumerate(attendance):
+        if attend:
+            arr.append((rank[i], i))
+    arr.sort()
+    a, b , c = arr[:3]
+    return 10000*a[1] + 100*b[1] + c[1]
+```
+
+
 <br>
 문자열 묶기
 
