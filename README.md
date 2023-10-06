@@ -13,10 +13,21 @@ import math
 ```
 
 <br>
-무작위로 K개의 수 뽑기
-
+배열 비교하기
 ```python
-
+def solution(arr1, arr2):
+    l1, l2 = len(arr1), len(arr2)
+    if l1 > l2:
+        return 1
+    elif l1 < l2:
+        return -1
+    elif l1 == l2:
+        if sum(arr1) > sum(arr2):
+            return 1
+        elif sum(arr1) < sum(arr2):
+            return -1
+        elif sum(arr1) == sum(arr2):
+            return 0
 ```
 
 
