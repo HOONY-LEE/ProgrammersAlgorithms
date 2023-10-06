@@ -1,6 +1,26 @@
 # ProgrammersAlgorithms
 
 
+## 2023.10.6(금)
+
+<br>
+배열의 길이를 2의 거듭제곱으로 만들기
+
+```python
+import math
+
+
+```
+
+<br>
+무작위로 K개의 수 뽑기
+
+```python
+
+```
+
+
+
 ## 2023.10.5(목)
 
 <br>
