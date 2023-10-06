@@ -4,12 +4,16 @@
 ## 2023.10.6(금)
 
 <br>
-배열의 길이를 2의 거듭제곱으로 만들기
+문자열 묶기
 
 ```python
-import math
-
-
+def solution(strArr):
+    lengths = [0 for _ in range(30)]
+    
+    for i in strArr:
+        lengths[len(i)-1] += 1
+    answer = max(lengths)
+    return answer
 ```
 
 <br>
