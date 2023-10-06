@@ -53,6 +53,7 @@ def solution(strArr):
 
 <br>
 배열 비교하기
+
 ```python
 def solution(arr1, arr2):
     l1, l2 = len(arr1), len(arr2)
