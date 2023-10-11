@@ -1,7 +1,18 @@
 # ProgrammersAlgorithms
 
 
-## 2023.10.10(월)
+## 2023.10.11(수)
+
+
+<br>
+ㅇㅇ
+
+```python
+ㅇㅇ
+```
+
+
+## 2023.10.10(화)
 
 
 <br>
@@ -16,47 +27,7 @@ def solution(arr, delete_list):
     return answer
 ```
 
-<br>
-제목
 
-```python
-def solution(rank, attendance):
-    answer = 0
-    # 1. arr 최소값 찾기
-    # 2. 참석여부 검사
-    # 3. 배열에 추가하고 해당 rank[i] 값 높게 변경
-    arr = []
-    while len(arr) < 3 :
-        idx = rank.index(min(rank))
-        if attendance[idx]:
-            arr.append(idx)
-            rank[idx] = 101
-        else:
-            rank[idx] = 101
-    a, b, c = arr
-    return 10000*a + 100*b + c
-```
-
-<br>
-제목
-
-```python
-def solution(rank, attendance):
-    answer = 0
-    # 1. arr 최소값 찾기
-    # 2. 참석여부 검사
-    # 3. 배열에 추가하고 해당 rank[i] 값 높게 변경
-    arr = []
-    while len(arr) < 3 :
-        idx = rank.index(min(rank))
-        if attendance[idx]:
-            arr.append(idx)
-            rank[idx] = 101
-        else:
-            rank[idx] = 101
-    a, b, c = arr
-    return 10000*a + 100*b + c
-```
 
 
 
