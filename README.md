@@ -536,6 +536,85 @@ def solution(n, slicer, num_list):
 <br>
 
 
+## 2023.09.13(수)
+<br>
+조건에 맞게 수열 변환하기3
+
+```python
+def solution(arr, k):
+    if k%2:
+        for i in range(len(arr)):
+            arr[i] *= k
+    else:
+        for i in range(len(arr)):
+            arr[i] += k
+    return arr
+```
+
+
+## 2023.09.12(화)
+<br>
+l로 만들기
+
+```python
+def solution(myString):
+    answer = ''
+    for i in myString:
+        if i < 'l':
+            answer += 'l'
+        else:
+            answer += i    
+    return answer
+```
+
+
+## 2023.09.11(월)
+<br>
+조건에 맞게 수열 변환하기3
+
+```python
+def solution(arr, k):
+    if k%2:
+        for i in range(len(arr)):
+            arr[i] *= k
+    else:
+        for i in range(len(arr)):
+            arr[i] += k
+    return arr
+```
+
+
+## 2023.09.10(일)
+<br>
+조건에 맞게 수열 변환하기3
+
+```python
+def solution(arr, k):
+    if k%2:
+        for i in range(len(arr)):
+            arr[i] *= k
+    else:
+        for i in range(len(arr)):
+            arr[i] += k
+    return arr
+```
+
+## 2023.09.09(토)
+<br>
+조건에 맞게 수열 변환하기3
+
+```python
+def solution(arr, k):
+    if k%2:
+        for i in range(len(arr)):
+            arr[i] *= k
+    else:
+        for i in range(len(arr)):
+            arr[i] += k
+    return arr
+```
+
+
 ## 2023.09.09(토)
 1일 1알고리즘 16일차, 하루에 쉬운문제 하나라도 풀어보자. 일단은 가장 익숙한 Python으로 풀어보기
 
