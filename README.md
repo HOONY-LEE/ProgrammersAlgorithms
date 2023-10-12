@@ -17,12 +17,35 @@
 
 
 <br>
-ㅇㅇ
+날짜 비교하기
 
 ```python
-ㅇㅇ
+def solution(date1, date2):
+    
+    if date1[0] > date2[0]:
+        return 0
+    elif date1[0] < date2[0]:
+        return 1
+    elif date1[0] == date2[0]:
+        if date1[1] > date2[1]:
+            return 0
+        elif date1[1] < date2[1]:
+            return 1
+        elif date1[1] == date2[1]:
+            if date1[2] > date2[2]:
+                return 0
+            elif date1[2] < date2[2]:
+                return 1
+            elif date1[2] == date2[2]:
+                return 0
 ```
-
+날짜 비교가 생각보다 까다로웠다. 반례 [10000, 12, 15], [0, 12, 17] 케이스를 염두에 두자.
+하지만 파이썬에서는 더 단순하게 리스트의 크기 비교가 가능하다. 어떤 원리의 동작인지는 정확하게 모르겠다.
+```python
+def solution(date1, date2):
+    return int(date1 < date2)
+```
+간단하게 이렇게 해결 가능하다.
 
 ## 2023.10.10(화)
 
