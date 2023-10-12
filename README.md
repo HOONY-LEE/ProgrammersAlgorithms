@@ -538,17 +538,17 @@ def solution(n, slicer, num_list):
 
 ## 2023.09.13(수)
 <br>
-조건에 맞게 수열 변환하기3
+특이한 이차원배월
 
 ```python
-def solution(arr, k):
-    if k%2:
-        for i in range(len(arr)):
-            arr[i] *= k
-    else:
-        for i in range(len(arr)):
-            arr[i] += k
-    return arr
+def solution(n):
+    answer = [[0 for _ in range(n)] for _ in range(n)]
+    
+    for i in range(n):
+        for j in range(n):
+            if i==j:
+                answer[i][j] = 1
+    return answer
 ```
 
 
