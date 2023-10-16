@@ -1,6 +1,32 @@
 # ProgrammersAlgorithms
 
 
+## 2023.10.16(월)
+
+
+<br>
+제목
+
+```python
+def solution(order):
+    answer = 0
+    # 1. 차가운것 뜨거운것 상관 없이 아메리카노인지 카페라떼인지 중요
+    # 2. anything -> 아메리카노
+    #    americano in -> 아메리카노
+    #    cafelatte in -> 라떼
+
+    for item in order:
+        if 'americano' in item:
+            answer += 4500
+        elif 'cafelatte' in item:
+            answer += 5000
+        elif 'anything' in item:
+            answer += 4500
+    return answer
+```
+
+
+
 ## 2023.10.15(일)
 
 
