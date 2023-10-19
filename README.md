@@ -37,24 +37,16 @@ def solution(n):
 
 
 <br>
-제목
+특별한 이차원배열2
 
 ```python
-def solution(order):
-    answer = 0
-    # 1. 차가운것 뜨거운것 상관 없이 아메리카노인지 카페라떼인지 중요
-    # 2. anything -> 아메리카노
-    #    americano in -> 아메리카노
-    #    cafelatte in -> 라떼
-
-    for item in order:
-        if 'americano' in item:
-            answer += 4500
-        elif 'cafelatte' in item:
-            answer += 5000
-        elif 'anything' in item:
-            answer += 4500
-    return answer
+def solution(arr):
+    N = len(arr)
+    for i in range(N):
+        for j in range(N):
+            if arr[i][j] != arr[j][i]:
+                return 0
+    return 1
 ```
 
 
