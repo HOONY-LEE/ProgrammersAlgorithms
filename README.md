@@ -6,24 +6,29 @@
 
 
 <br>
-제목
+정수를 나선형으로 배치하기
 
 ```python
-def solution(order):
-    answer = 0
-    # 1. 차가운것 뜨거운것 상관 없이 아메리카노인지 카페라떼인지 중요
-    # 2. anything -> 아메리카노
-    #    americano in -> 아메리카노
-    #    cafelatte in -> 라떼
-
-    for item in order:
-        if 'americano' in item:
-            answer += 4500
-        elif 'cafelatte' in item:
-            answer += 5000
-        elif 'anything' in item:
-            answer += 4500
-    return answer
+def solution(n):
+    arr = [[0 for _ in range(n)] for _ in range(n)]
+    x = 0
+    y = 0
+    num = 1
+    delta = 0
+    direction = [[0,1],[1,0],[0,-1],[-1,0]]
+    print(arr[x][y])
+    for _ in range(n*n):
+        arr[x][y] = num
+        nextX = x + direction[delta][0]
+        nextY = y + direction[delta][1]
+        if nextX >= n or nextY >= n or nextX < 0 or nextY < 0 or arr[nextX][nextY]:
+            delta = (delta+1)%4
+            nextX = x + direction[delta][0]
+            nextY = y + direction[delta][1]
+        x = nextX
+        y = nextY
+        num += 1
+    return arr
 ```
 
 
