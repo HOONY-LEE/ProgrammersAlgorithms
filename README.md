@@ -5,30 +5,25 @@
 
 
 <br>
-정수를 나선형으로 배치하기
+정사각형으로 만들기
 
 ```python
-def solution(n):
-    arr = [[0 for _ in range(n)] for _ in range(n)]
-    x = 0
-    y = 0
-    num = 1
-    delta = 0
-    direction = [[0,1],[1,0],[0,-1],[-1,0]]
-    print(arr[x][y])
-    for _ in range(n*n):
-        arr[x][y] = num
-        nextX = x + direction[delta][0]
-        nextY = y + direction[delta][1]
-        if nextX >= n or nextY >= n or nextX < 0 or nextY < 0 or arr[nextX][nextY]:
-            delta = (delta+1)%4
-            nextX = x + direction[delta][0]
-            nextY = y + direction[delta][1]
-        x = nextX
-        y = nextY
-        num += 1
+def solution(arr):
+    x = len(arr)
+    y = len(arr[0])
+
+    # 행의 수가 많을 때
+    if x > y:
+        for i in range(x):
+            for _ in range(x-y):
+                arr[i].append(0)
+    # 열의 수가 많을 때
+    elif x < y:
+        for _ in range(y-x):
+            arr.append([0 for _ in range(y)])   
     return arr
 ```
+테스트 케이스가 점점 복잡해진다. 리팩토링보다는 깔끔한 예외처리를 먼저 생각하자.
 
 
 
