@@ -7,23 +7,16 @@
 
 
 <br>
-정사각형으로 만들기
+이차원 배열 대각선 순회하기
 
 ```python
-def solution(arr):
-    x = len(arr)
-    y = len(arr[0])
-
-    # 행의 수가 많을 때
-    if x > y:
-        for i in range(x):
-            for _ in range(x-y):
-                arr[i].append(0)
-    # 열의 수가 많을 때
-    elif x < y:
-        for _ in range(y-x):
-            arr.append([0 for _ in range(y)])   
-    return arr
+def solution(board, k):
+    answer = 0
+    for i in range(len(board)):
+        for j in range(len(board[0])):
+            if i+j <= k:
+                answer += board[i][j]
+    return answer
 ```
 
 
