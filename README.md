@@ -25,25 +25,13 @@ def solution(board, k):
 
 
 <br>
-정사각형으로 만들기
+종이 자르기
 
 ```python
-def solution(arr):
-    x = len(arr)
-    y = len(arr[0])
-
-    # 행의 수가 많을 때
-    if x > y:
-        for i in range(x):
-            for _ in range(x-y):
-                arr[i].append(0)
-    # 열의 수가 많을 때
-    elif x < y:
-        for _ in range(y-x):
-            arr.append([0 for _ in range(y)])   
-    return arr
+def solution(M, N):
+    return (M-1) + M*(N-1)
 ```
-테스트 케이스가 점점 복잡해진다. 리팩토링보다는 깔끔한 예외처리를 먼저 생각하자.
+규칙과 패턴을 찾으면 생각보다 간단한 문제. 하지만 적기 귀찮음
 
 
 
