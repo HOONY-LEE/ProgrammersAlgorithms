@@ -6,18 +6,26 @@
 
 
 <br>
-이차원 배열 대각선 순회하기
+분수의 덧셈
 
 ```python
-def solution(board, k):
-    answer = 0
-    for i in range(len(board)):
-        for j in range(len(board[0])):
-            if i+j <= k:
-                answer += board[i][j]
-    return answer
-```
+def solution(numer1, denom1, numer2, denom2):
+    lcm = 0
+    for i in range(max(denom1, denom2), denom1 * denom2 + 1):
+        if i%denom1 == 0 and i%denom2 == 0:
+            lcm = i
+            break
+    n, m = int(numer1*(lcm/denom1) + numer2*(lcm/denom2)) , lcm
+    print(n, m)
+    gcd = 1
+    for i in range(1, min(n, m) + 1):
+        if n%i == 0 and m%i == 0:
+            gcd = i
 
+    return [n/gcd, m/gcd]
+```
+최대공약수와 최소공배수를 직접 짜려고하니 생각보다 어려웠다. 파이썬의 익숙함에 속아 기본적인 함수들도
+못만들게 된 것 같다는 반성이든다.
 
 
 
