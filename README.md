@@ -2,6 +2,24 @@
 
 
 
+## 2023.10.23(화)
+
+
+<br>
+이차원 배열 대각선 순회하기
+
+```python
+def solution(board, k):
+    answer = 0
+    for i in range(len(board)):
+        for j in range(len(board[0])):
+            if i+j <= k:
+                answer += board[i][j]
+    return answer
+```
+
+
+
 
 ## 2023.10.23(월)
 
