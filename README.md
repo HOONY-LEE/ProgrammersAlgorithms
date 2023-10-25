@@ -5,23 +5,11 @@
 
 
 <br>
-분수의 덧셈
+중앙값 구하기
 
 ```python
-def solution(numer1, denom1, numer2, denom2):
-    lcm = 0
-    for i in range(max(denom1, denom2), denom1 * denom2 + 1):
-        if i%denom1 == 0 and i%denom2 == 0:
-            lcm = i
-            break
-    n, m = int(numer1*(lcm/denom1) + numer2*(lcm/denom2)) , lcm
-    print(n, m)
-    gcd = 1
-    for i in range(1, min(n, m) + 1):
-        if n%i == 0 and m%i == 0:
-            gcd = i
-
-    return [n/gcd, m/gcd]
+def solution(array):
+    return sorted(array)[len(array)//2]
 ```
 
 
