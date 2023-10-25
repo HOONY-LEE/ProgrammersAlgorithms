@@ -115,26 +115,13 @@ def solution(arr):
 
 
 <br>
-정사각형으로 만들기
+배열 두배 만들기
 
 ```python
-def solution(arr):
-    x = len(arr)
-    y = len(arr[0])
-
-    # 행의 수가 많을 때
-    if x > y:
-        for i in range(x):
-            for _ in range(x-y):
-                arr[i].append(0)
-    # 열의 수가 많을 때
-    elif x < y:
-        for _ in range(y-x):
-            arr.append([0 for _ in range(y)])   
-    return arr
+def solution(numbers):
+    return [i*2 for i in numbers]
 ```
-테스트 케이스가 점점 복잡해진다. 리팩토링보다는 깔끔한 예외처리를 먼저 생각하자.
-
+easy
 
 
 
