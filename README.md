@@ -1,7 +1,20 @@
 # ProgrammersAlgorithms
 
 
-## 2023.10.23(수)
+## 2023.10.26(목)
+
+
+<br>
+중앙값 구하기
+
+```python
+def solution(array):
+    return sorted(array)[len(array)//2]
+```
+
+
+
+## 2023.10.25(수)
 
 
 <br>
@@ -15,7 +28,7 @@ def solution(array):
 
 
 
-## 2023.10.23(화)
+## 2023.10.24(화)
 
 
 <br>
