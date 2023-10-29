@@ -1,5 +1,33 @@
 # ProgrammersAlgorithms
 
+
+## 2023.10.29(일)
+  
+
+<br>
+최빈값 구하기
+
+```python
+def solution(array):
+    size = max(array)
+    cnt = 0
+    idx = 0
+    arr = [0 for _ in range(size + 1)]
+    for i in array:
+        arr[i] += 1
+    maxV = max(arr)    
+
+    for i, value in enumerate(arr):
+        if value == maxV:
+            cnt += 1
+            idx = i
+    if cnt == 1:
+        return idx
+    else:
+        return -1
+```
+
+
 ## 2023.10.28(토)
   
 
