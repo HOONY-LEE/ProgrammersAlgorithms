@@ -63,26 +63,15 @@ def solution(n):
   
 
 <br>
-최빈값 구하기
+피자 나눠먹기(2)
 
 ```python
-def solution(array):
-    size = max(array)
-    cnt = 0
-    idx = 0
-    arr = [0 for _ in range(size + 1)]
-    for i in array:
-        arr[i] += 1
-    maxV = max(arr)    
-
-    for i, value in enumerate(arr):
-        if value == maxV:
-            cnt += 1
-            idx = i
-    if cnt == 1:
-        return idx
-    else:
-        return -1
+def solution(n):
+    answer = 1
+    while True:
+        if (answer*6)%n == 0:
+            return answer
+        answer += 1
 ```
 
 
