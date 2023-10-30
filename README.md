@@ -3,26 +3,15 @@
 ## 2023.10.30(월)
   
 <br>
-최빈값 구하기
+짝수는 싫어요
 
 ```python
-def solution(array):
-    size = max(array)
-    cnt = 0
-    idx = 0
-    arr = [0 for _ in range(size + 1)]
-    for i in array:
-        arr[i] += 1
-    maxV = max(arr)    
-
-    for i, value in enumerate(arr):
-        if value == maxV:
-            cnt += 1
-            idx = i
-    if cnt == 1:
-        return idx
-    else:
-        return -1
+def solution(n):
+    answer = []
+    for i in range(n+1):
+        if i%2:
+            answer.append(i)
+    return answer
 ```
 
 
