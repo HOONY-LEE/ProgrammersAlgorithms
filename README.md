@@ -1044,12 +1044,11 @@ def solution(money):
 
 
 <br>
-아이스아메리카노
+배열 뒤집기
 
 ```python
-def solution(money):
-    answer = [money//5500, money%5500]
-    return answer
+def solution(num_list):
+    return num_list[::-1]
 ```
 
 
