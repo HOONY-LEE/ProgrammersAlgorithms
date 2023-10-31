@@ -1026,3 +1026,13 @@ def solution(arr, k):
     return arr
 ```
 
+
+## 2023.09.08(금)
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
