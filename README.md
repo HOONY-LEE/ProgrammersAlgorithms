@@ -1,6 +1,15 @@
 # ProgrammersAlgorithms
 
 ## 2023.10.31(화)
+
+
+<br>
+배열의 평균값
+
+```python
+def solution(numbers):
+    return sum(numbers)/len(numbers)
+```
   
 <br>
 피자 나눠먹기(3)
