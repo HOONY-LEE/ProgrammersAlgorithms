@@ -1028,6 +1028,63 @@ def solution(arr, k):
 
 
 ## 2023.09.08(금)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+
+## 2023.09.07(목)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+
+
+## 2023.09.06(수)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+
+
+
+## 2023.09.05(화)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+
+## 2023.09.04(월)
+
+
 <br>
 아이스아메리카노
 
