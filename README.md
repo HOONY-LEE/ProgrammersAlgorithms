@@ -1,5 +1,20 @@
 # ProgrammersAlgorithms
 
+## 2023.10.31(화)
+  
+<br>
+짝수는 싫어요
+
+```python
+def solution(n):
+    answer = []
+    for i in range(n+1):
+        if i%2:
+            answer.append(i)
+    return answer
+```
+
+
 ## 2023.10.30(월)
   
 <br>
