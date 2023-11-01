@@ -1236,12 +1236,11 @@ def solution(money):
 
 
 <br>
-아이스아메리카노
+배열 원소의 길이
 
 ```python
-def solution(money):
-    answer = [money//5500, money%5500]
-    return answer
+def solution(strlist):
+    return [len(x) for x in strlist]
 ```
 
 ## 2023.08.25(금)
