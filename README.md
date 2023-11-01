@@ -1185,11 +1185,14 @@ def solution(n, k):
 
 
 <br>
-아이스아메리카노
+짝수의 합
 
 ```python
-def solution(money):
-    answer = [money//5500, money%5500]
+def solution(n):
+    answer = 0
+    for i in range(2,n+1):
+        if i%2 == 0:
+            answer += i
     return answer
 ```
 
