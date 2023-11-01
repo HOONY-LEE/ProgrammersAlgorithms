@@ -5,20 +5,11 @@
 
 
 <br>
-옷가게 할인 받기
+문자열 뒤집기
 
 ```python
-def solution(price):
-    answer = 0
-    if price >= 500000:
-        answer = price*0.8
-    elif price >= 300000:
-        answer = price*0.9
-    elif price >= 100000:
-        answer = price*0.95
-    else:
-        answer = price
-    return int(answer)
+def solution(my_string):
+    return my_string[::-1]
 ```
 
 
