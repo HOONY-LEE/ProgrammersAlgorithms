@@ -1248,10 +1248,9 @@ def solution(money):
 
 
 <br>
-아이스아메리카노
+편지
 
 ```python
-def solution(money):
-    answer = [money//5500, money%5500]
-    return answer
+def solution(message):
+    return len(message)*2
 ```
