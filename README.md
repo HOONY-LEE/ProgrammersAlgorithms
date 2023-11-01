@@ -1070,12 +1070,13 @@ def solution(num_list):
 
 
 <br>
-아이스아메리카노
+직각삼각형 출력하기
 
 ```python
-def solution(money):
-    answer = [money//5500, money%5500]
-    return answer
+n = int(input())
+
+for i in range(1,n+1):
+    print('*' * i)
 ```
 
 
