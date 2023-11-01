@@ -1121,3 +1121,134 @@ def solution(money):
     answer = [money//5500, money%5500]
     return answer
 ```
+
+
+
+## 2023.09.03(일)
+
+
+<br>
+특정 문자 제거하기
+
+```python
+def solution(my_string, letter):
+    answer = ''
+    for i in my_string:
+        if i!=letter:
+            answer += i
+    return answer
+```
+
+## 2023.09.02(토)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+## 2023.09.01(금)
+
+
+<br>
+각도기
+
+```python
+def solution(angle):
+    if 0 < angle < 90:
+        return 1
+    elif angle == 90:
+        return 2
+    elif 90 < angle < 180:
+        return 3
+    elif angle == 180:
+        return 4
+```
+
+## 2023.08.31(목)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+## 2023.08.30(수)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+## 2023.08.29(화)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+## 2023.08.28(월)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+## 2023.08.27(일)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+## 2023.08.26(토)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
+
+## 2023.08.25(금)
+
+
+<br>
+아이스아메리카노
+
+```python
+def solution(money):
+    answer = [money//5500, money%5500]
+    return answer
+```
