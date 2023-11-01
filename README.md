@@ -1058,11 +1058,13 @@ def solution(arr, k):
 
 
 <br>
-아이스아메리카노
+문자열 반복 출력
 
 ```python
-def solution(money):
-    answer = [money//5500, money%5500]
+def solution(my_string, n):
+    answer = ''
+    for i in my_string:
+        answer += i*n
     return answer
 ```
 
