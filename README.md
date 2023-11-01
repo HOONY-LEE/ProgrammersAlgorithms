@@ -1173,11 +1173,11 @@ def solution(angle):
 
 
 <br>
-아이스아메리카노
+양꼬치
 
 ```python
-def solution(money):
-    answer = [money//5500, money%5500]
+def solution(n, k):
+    answer = 12000*n + 2000*k - 2000*(n//10)
     return answer
 ```
 
