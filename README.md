@@ -5,16 +5,15 @@
 ## 2023.11.02(목)
 
 <br>
-짝수 홀수 개수
+외계행성의 나이
 
 ```python
-def solution(num_list):
-    answer = [0,0]
-    for i in num_list:
-        if i%2:
-            answer[1] += 1
-        else:
-            answer[0] += 1
+def solution(age):
+    answer = ''
+    ageList = ['a','b','c','d','e','f','g','h','i','j']
+    strAge = str(age)
+    for i in strAge:
+        answer += ageList[int(i)]
     return answer
 ```
 
