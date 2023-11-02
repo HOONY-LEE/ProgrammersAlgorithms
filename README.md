@@ -1,6 +1,24 @@
 # ProgrammersAlgorithms
 
 
+
+## 2023.11.02(목)
+
+<br>
+짝수 홀수 개수
+
+```python
+def solution(num_list):
+    answer = [0,0]
+    for i in num_list:
+        if i%2:
+            answer[1] += 1
+        else:
+            answer[0] += 1
+    return answer
+```
+
+
 ## 2023.11.01(수)
 
 <br>
