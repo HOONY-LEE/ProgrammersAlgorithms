@@ -1230,13 +1230,13 @@ def solution(money):
 
 
 <br>
-아이스아메리카노
+문자열 안의 문자열
 
 ```python
-def solution(money):
-    answer = [money//5500, money%5500]
-    return answer
+def solution(str1, str2):
+    return 1 if str2 in str1 else 2 
 ```
+=> 파이썬의 3항 연산자는 조금 특이하다. (참) if (조건) else (거짓)
 
 ## 2023.08.27(일)
 
