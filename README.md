@@ -2,6 +2,29 @@
 
 
 
+## 2023.11.02(금)
+
+
+<br>
+진료순서 정하기
+
+```python
+def solution(emergency):
+    size = len(emergency)
+    answer = [0 for _ in range(size)]
+    tmp = emergency.copy()
+    tmp.sort(reverse=True)
+
+    for i in range(size):
+        for j in range(size):
+            if emergency[i] == tmp[j]:
+                answer[i] = j+1
+
+    return answer
+```
+
+
+
 ## 2023.11.02(목)
 
 
