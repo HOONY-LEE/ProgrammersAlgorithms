@@ -6,22 +6,17 @@
 
 
 <br>
-진료순서 정하기
+순서쌍의 개수
 
 ```python
-def solution(emergency):
-    size = len(emergency)
-    answer = [0 for _ in range(size)]
-    tmp = emergency.copy()
-    tmp.sort(reverse=True)
-
-    for i in range(size):
-        for j in range(size):
-            if emergency[i] == tmp[j]:
-                answer[i] = j+1
-
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:
+            answer += 1
     return answer
 ```
+=> 순서쌍의 개수는 결국 약수의 개수를 구하는 것
 
 
 
