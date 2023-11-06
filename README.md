@@ -41,11 +41,13 @@ def solution(n):
 순서쌍의 개수
 
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:
-            answer += 1
+def solution(hp):
+    answer = 0    
+    answer += hp//5
+    hp = hp%5
+    answer += hp//3
+    hp = hp%3
+    answer += hp
     return answer
 ```
 
