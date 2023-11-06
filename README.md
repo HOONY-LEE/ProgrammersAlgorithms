@@ -38,7 +38,7 @@ def solution(n):
 
 
 <br>
-순서쌍의 개수
+개미 군단
 
 ```python
 def solution(hp):
