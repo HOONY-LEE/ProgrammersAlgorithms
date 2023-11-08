@@ -29,14 +29,18 @@ def solution(letter):
 
 
 <br>
-순서쌍의 개수
+가위 바위 보
 
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:
-            answer += 1
+def solution(rsp):
+    answer = ''
+    for i in rsp:
+        if i=='2':
+            answer += '0'
+        elif i=='0':
+            answer += '5'
+        elif i=='5':
+            answer += '2'
     return answer
 ```
 
