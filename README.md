@@ -1,6 +1,40 @@
 # ProgrammersAlgorithms
 
 
+## 2023.11.13(월)
+
+ 
+<br>
+순서쌍
+
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:
+            answer += 1
+    return answer
+```
+
+
+
+## 2023.11.12(일)
+
+ 
+<br>
+순서쌍
+
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:
+            answer += 1
+    return answer
+```
+
+
+
   
 ## 2023.11.11(토)
 
