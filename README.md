@@ -1,7 +1,7 @@
 # ProgrammersAlgorithms
 
 
-## 2023.11.20(수)
+## 2023.11.23(목)
 
  
 <br>
@@ -17,7 +17,24 @@ def solution(n):
 ```
 
 
-## 2023.11.20(화)
+
+## 2023.11.22(수)
+
+ 
+<br>
+순서쌍
+
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:
+            answer += 1
+    return answer
+```
+
+
+## 2023.11.21(화)
 
  
 <br>
