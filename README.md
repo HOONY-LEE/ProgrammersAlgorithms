@@ -14,7 +14,7 @@ def solution(n):
             answer += 1
     return answer
 ```
-
+  
 
 ## 2023.11.30(목)
 
