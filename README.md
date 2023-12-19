@@ -1,6 +1,21 @@
 # ProgrammersAlgorithms
 
-## 2023.12.16(월)
+## 2023.12.19(화)
+ 
+<br>
+순서쌍
+
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:
+            answer += 1
+    return answer
+```
+
+
+## 2023.12.18(월)
  
 <br>
 순서쌍
@@ -16,7 +31,7 @@ def solution(n):
 
 
 
-## 2023.12.15(일)
+## 2023.12.17(일)
  
 <br>
 순서쌍
