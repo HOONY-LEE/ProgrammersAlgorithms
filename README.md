@@ -3,7 +3,7 @@
 ## 2023.12.29(금)
  
 <br>
-순서쌍
+순서쌍 
 
 ```python
 def solution(n):
