@@ -1,7 +1,7 @@
 # ProgrammersAlgorithms]
 ## 2024.02.06(토)
    
-<br> 
+<br>   
 순서쌍 
 
 ```python
