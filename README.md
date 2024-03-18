@@ -1,6 +1,20 @@
 # ProgrammersAlgorithms]
 
-## 2024.03.16(일)
+## 2024.03.18(월)
+     
+<br>     
+순서쌍2 
+
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:
+            answer += 1
+    return answer
+```
+
+## 2024.03.17(일)
      
 <br>     
 순서쌍2 
@@ -15,7 +29,7 @@ def solution(n):
 ```
 
 
-## 2024.03.15(토)
+## 2024.03.16(토)
      
 <br>     
 순서쌍2 
@@ -31,7 +45,7 @@ def solution(n):
 
 
 
-## 2024.03.14(금)
+## 2024.03.15(금)
      
 <br>     
 순서쌍2 
