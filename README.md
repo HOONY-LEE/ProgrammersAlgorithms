@@ -1,6 +1,6 @@
 # ProgrammersAlgorithms
 
-## 2024.04.13(일)
+## 2024.04.15(월)
      
 <br>     
 순서쌍2 
@@ -15,21 +15,7 @@ def solution(n):
 ```
 
 
-## 2024.04.12(토)
-     
-<br>     
-순서쌍2 
-
-```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:
-            answer += 1
-    return answer
-```
-
-## 2024.04.11(금)
+## 2024.04.14(일)
      
 <br>     
 순서쌍2 
@@ -44,7 +30,21 @@ def solution(n):
 ```
 
 
-## 2024.04.10(목)
+## 2024.04.13(토)
+     
+<br>     
+순서쌍2 
+
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:
+            answer += 1
+    return answer
+```
+
+## 2024.04.12(금)
      
 <br>     
 순서쌍2 
@@ -59,7 +59,22 @@ def solution(n):
 ```
 
 
-## 2024.04.09(수)
+## 2024.04.11(목)
+     
+<br>     
+순서쌍2 
+
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:
+            answer += 1
+    return answer
+```
+
+
+## 2024.04.10(수)
      
 <br>     
 순서쌍2 
