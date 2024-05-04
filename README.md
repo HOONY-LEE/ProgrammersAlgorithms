@@ -14,7 +14,7 @@ def solution(n):
             answer += 1
     return answer
 ```
-
+ 
 
 ## 2024.04.30(화)
      
