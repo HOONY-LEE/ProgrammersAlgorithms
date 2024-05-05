@@ -4,7 +4,7 @@
 ## 2024.04.30(수)
      
 <br>     
-순서쌍2 
+순서쌍2  
 
 ```python
 def solution(n):
