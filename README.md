@@ -13,7 +13,7 @@ def solution(n):
     return answer
 ```
 
-
+ 
 ## 2024.05.09(목)
      
 <br>     
