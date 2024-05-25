@@ -12,7 +12,7 @@ def solution(n):
         if n%i == 0:
             answer += 1
     return answer
-```
+``` 
 
 
 ## 2024.05.23(수)
