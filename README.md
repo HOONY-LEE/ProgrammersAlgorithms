@@ -13,7 +13,7 @@ def solution(n):
             answer += 1
     return answer
 ```
-
+ 
 
 ## 2024.06.03(화)
      
