@@ -7,7 +7,7 @@
      
 <br>     
 순서쌍2  
-  
+   
 ```python
 def solution(n):
     answer = 0
