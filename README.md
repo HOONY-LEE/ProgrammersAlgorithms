@@ -3,6 +3,21 @@
 
 
 
+## 2024.09.05(목)
+        
+<br>     
+순서쌍2  
+   
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:  
+            answer += 1
+    return answer
+```
+
+
 ## 2024.09.04(수)
         
 <br>     
