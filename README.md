@@ -1,6 +1,21 @@
       
 # ProgrammersAlgorithms
 
+## 2024.10.21(월)
+        
+<br>     
+순서쌍2  
+     
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:  
+            answer += 1. 
+    return answer
+```
+
+
 ## 2024.10.20(일)
         
 <br>     
