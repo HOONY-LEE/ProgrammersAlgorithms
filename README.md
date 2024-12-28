@@ -1,7 +1,7 @@
           
 # ProgrammersAlgorithms
 
-## 2024.12.27(금)   
+## 2024.12.27(금)    
          
 <br>     
 순서쌍2  
