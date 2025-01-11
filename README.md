@@ -1,6 +1,22 @@
               
 # ProgrammersAlgorithms
 
+
+## 2025.01.11(토)     
+         
+<br>     
+순서쌍2  
+     
+```python
+def solution(n):
+    answer = 0
+    for i in range(1,n+1):
+        if n%i == 0:  
+            answer += 1. 
+    return answer
+```
+
+
 ## 2025.01.10(금)     
          
 <br>     
