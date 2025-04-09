@@ -6,7 +6,7 @@
 ## 2025.03.25(화)     
              
 <br>        
-순서쌍2  
+순서쌍2    
      
 ```python
 def solution(n):
