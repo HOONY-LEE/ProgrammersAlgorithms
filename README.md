@@ -1,8 +1,137 @@
               
 # ProgrammersAlgorithms
+
+## 2025.04.25(금)
+
+<br>
+가장 긴 팰린드롬 부분 문자열** 문자열 `s`가 주어졌을 때, `s`의 부분 문자열 중 가장 긴 팰린드롬을 구하세요. 예시 입력: `"babad"` → 출력: `"bab"` 또는 `"aba"`
+
+     
+```python
+def solution(s):
+    n = len(s)
+    result = ""
+    
+    for i in range(n):
+        for j in range(i, n):
+            substr = s[i:j+1]
+            if substr == substr[::-1] and len(substr) > len(result):
+                result = substr
+    return result
+
+```
+
+
+## 2025.04.23(수)
+
+<br>
+두 배열의 합** 정수 배열 `A`, `B`가 주어질 때, `A`에서 하나, `B`에서 하나를 골라 만들 수 있는 두 수의 합 중에서 특정 정수 `X`를 만들 수 있는 경우의 수를 구하세요. (각 배열의 길이는 최대 1,000)
+
+     
+```python
+from collections import Counter
+
+def solution(A, B, X):
+    count = 0
+    counter_B = Counter(B)
+    
+    for a in A:
+        if (X - a) in counter_B:
+            count += counter_B[X - a]
+    
+    return count
+```
+
+
+## 2025.04.22(화)
+
+<br>
+섬의 개수** 2차원 배열 `grid`가 주어질 때, '1'은 땅, '0'은 물입니다. 섬은 상하좌우로 연결된 땅들로 이루어져 있습니다. 섬의 개수를 구하세요.
+
+     
+```python
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
+
+```
+
+
+## 2025.04.20(일)
+
+<br>
+주식을 사고팔기 가장 좋은 시점** 정수 배열 `prices`가 주어질 때, 하루에 한 주씩 사고팔 수 있다고 했을 때, 가장 큰 이익을 반환하세요. (단, 반드시 사고 나서 팔아야 함)
+
+     
+```python
+def solution(prices):
+    min_price = float('inf')
+    max_profit = 0
+    
+    for price in prices:
+        min_price = min(min_price, price)
+        max_profit = max(max_profit, price - min_price)
+    
+    return max_profit
+
+```
+
+## 2025.04.19(토)
+
+<br>
+이진 트리의 최대 깊이** 이진 트리를 나타내는 `TreeNode`가 주어졌을 때, 그 트리의 최대 깊이를 반환하세요.
+
+     
+```python
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def solution(root):
+    if not root:
+        return 0
+    return 1 + max(solution(root.left), solution(root.right))
+
+```
+
+
+
+## 2025.04.16(수)
+
+<br>
+두 배열의 합** 정수 배열 `A`, `B`가 주어질 때, `A`에서 하나, `B`에서 하나를 골라 만들 수 있는 두 수의 합 중에서 특정 정수 `X`를 만들 수 있는 경우의 수를 구하세요. (각 배열의 길이는 최대 1,000)
+
+     
+```python
+from collections import Counter
+
+def solution(A, B, X):
+    count = 0
+    counter_B = Counter(B)
+    
+    for a in A:
+        if (X - a) in counter_B:
+            count += counter_B[X - a]
+    
+    return count
+```
   
    
-## 2025.04.24(수)     
+## 2025.04.15(화)     
              
 <br>        
 순서쌍2    
@@ -17,34 +146,46 @@ def solution(n):
 ```
 
         
-## 2025.04.23(수)     
+## 2025.04.14(월)     
              
-<br>        
-순서쌍2    
-       
+<br>
+두 배열의 합** 정수 배열 `A`, `B`가 주어질 때, `A`에서 하나, `B`에서 하나를 골라 만들 수 있는 두 수의 합 중에서 특정 정수 `X`를 만들 수 있는 경우의 수를 구하세요. (각 배열의 길이는 최대 1,000)
+
+     
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+from collections import Counter
+
+def solution(A, B, X):
+    count = 0
+    counter_B = Counter(B)
+    
+    for a in A:
+        if (X - a) in counter_B:
+            count += counter_B[X - a]
+    
+    return count
 ```
 
           
         
-## 2025.04.12(금)     
+## 2025.04.13(금)     
              
-<br>        
-순서쌍2    
-       
+<br>
+이진 트리의 최대 깊이** 이진 트리를 나타내는 `TreeNode`가 주어졌을 때, 그 트리의 최대 깊이를 반환하세요.
+
+     
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def solution(root):
+    if not root:
+        return 0
+    return 1 + max(solution(root.left), solution(root.right))
+
 ```
   
      
@@ -65,16 +206,21 @@ def solution(n):
            
 ## 2025.03.25(화)     
              
-<br>        
-순서쌍2    
+<br>
+주식을 사고팔기 가장 좋은 시점** 정수 배열 `prices`가 주어질 때, 하루에 한 주씩 사고팔 수 있다고 했을 때, 가장 큰 이익을 반환하세요. (단, 반드시 사고 나서 팔아야 함)
+
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(prices):
+    min_price = float('inf')
+    max_profit = 0
+    
+    for price in prices:
+        min_price = min(min_price, price)
+        max_profit = max(max_profit, price - min_price)
+    
+    return max_profit
+
 ```
    
       
@@ -99,32 +245,48 @@ def solution(n):
      
 ## 2025.03.13(목)     
          
-<br>      
-순서쌍2  
+<br>
+섬의 개수** 2차원 배열 `grid`가 주어질 때, '1'은 땅, '0'은 물입니다. 섬은 상하좌우로 연결된 땅들로 이루어져 있습니다. 섬의 개수를 구하세요.
+
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
+
 ```
 
       
      
 ## 2025.03.12(수)     
          
-<br>      
-순서쌍2  
+<br>
+주식을 사고팔기 가장 좋은 시점** 정수 배열 `prices`가 주어질 때, 하루에 한 주씩 사고팔 수 있다고 했을 때, 가장 큰 이익을 반환하세요. (단, 반드시 사고 나서 팔아야 함)
+
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(prices):
+    min_price = float('inf')
+    max_profit = 0
+    
+    for price in prices:
+        min_price = min(min_price, price)
+        max_profit = max(max_profit, price - min_price)
+    
+    return max_profit
+
 ```
 
 
