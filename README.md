@@ -2,10 +2,10 @@
 # ProgrammersAlgorithms
 
 ## 2025.04.25(금)
-
+ 
 <br>
 가장 긴 팰린드롬 부분 문자열** 문자열 `s`가 주어졌을 때, `s`의 부분 문자열 중 가장 긴 팰린드롬을 구하세요. 예시 입력: `"babad"` → 출력: `"bab"` 또는 `"aba"`
-
+<br>
      
 ```python
 def solution(s):
@@ -26,7 +26,7 @@ def solution(s):
 
 <br>
 두 배열의 합** 정수 배열 `A`, `B`가 주어질 때, `A`에서 하나, `B`에서 하나를 골라 만들 수 있는 두 수의 합 중에서 특정 정수 `X`를 만들 수 있는 경우의 수를 구하세요. (각 배열의 길이는 최대 1,000)
-
+<br>
      
 ```python
 from collections import Counter
@@ -47,7 +47,7 @@ def solution(A, B, X):
 
 <br>
 섬의 개수** 2차원 배열 `grid`가 주어질 때, '1'은 땅, '0'은 물입니다. 섬은 상하좌우로 연결된 땅들로 이루어져 있습니다. 섬의 개수를 구하세요.
-
+<br>
      
 ```python
 def solution(grid):
@@ -73,7 +73,7 @@ def solution(grid):
 
 <br>
 주식을 사고팔기 가장 좋은 시점** 정수 배열 `prices`가 주어질 때, 하루에 한 주씩 사고팔 수 있다고 했을 때, 가장 큰 이익을 반환하세요. (단, 반드시 사고 나서 팔아야 함)
-
+<br>
      
 ```python
 def solution(prices):
@@ -92,7 +92,7 @@ def solution(prices):
 
 <br>
 이진 트리의 최대 깊이** 이진 트리를 나타내는 `TreeNode`가 주어졌을 때, 그 트리의 최대 깊이를 반환하세요.
-
+<br>
      
 ```python
 class TreeNode:
@@ -114,7 +114,7 @@ def solution(root):
 
 <br>
 두 배열의 합** 정수 배열 `A`, `B`가 주어질 때, `A`에서 하나, `B`에서 하나를 골라 만들 수 있는 두 수의 합 중에서 특정 정수 `X`를 만들 수 있는 경우의 수를 구하세요. (각 배열의 길이는 최대 1,000)
-
+<br>
      
 ```python
 from collections import Counter
@@ -135,7 +135,8 @@ def solution(A, B, X):
              
 <br>        
 순서쌍2    
-       
+<br>       
+
 ```python
 def solution(n):
     answer = 0
@@ -150,7 +151,7 @@ def solution(n):
              
 <br>
 두 배열의 합** 정수 배열 `A`, `B`가 주어질 때, `A`에서 하나, `B`에서 하나를 골라 만들 수 있는 두 수의 합 중에서 특정 정수 `X`를 만들 수 있는 경우의 수를 구하세요. (각 배열의 길이는 최대 1,000)
-
+<br>
      
 ```python
 from collections import Counter
@@ -172,7 +173,7 @@ def solution(A, B, X):
              
 <br>
 이진 트리의 최대 깊이** 이진 트리를 나타내는 `TreeNode`가 주어졌을 때, 그 트리의 최대 깊이를 반환하세요.
-
+<br>
      
 ```python
 class TreeNode:
@@ -193,7 +194,8 @@ def solution(root):
              
 <br>        
 순서쌍2    
-     
+<br>
+
 ```python
 def solution(n):
     answer = 0
@@ -208,7 +210,7 @@ def solution(n):
              
 <br>
 주식을 사고팔기 가장 좋은 시점** 정수 배열 `prices`가 주어질 때, 하루에 한 주씩 사고팔 수 있다고 했을 때, 가장 큰 이익을 반환하세요. (단, 반드시 사고 나서 팔아야 함)
-
+<br>
      
 ```python
 def solution(prices):
@@ -230,7 +232,8 @@ def solution(prices):
          
 <br>      
 순서쌍2  
-     
+<br>    
+
 ```python
 def solution(n):
     answer = 0
@@ -247,7 +250,7 @@ def solution(n):
          
 <br>
 섬의 개수** 2차원 배열 `grid`가 주어질 때, '1'은 땅, '0'은 물입니다. 섬은 상하좌우로 연결된 땅들로 이루어져 있습니다. 섬의 개수를 구하세요.
-
+<br>
      
 ```python
 def solution(grid):
@@ -274,7 +277,7 @@ def solution(grid):
          
 <br>
 주식을 사고팔기 가장 좋은 시점** 정수 배열 `prices`가 주어질 때, 하루에 한 주씩 사고팔 수 있다고 했을 때, 가장 큰 이익을 반환하세요. (단, 반드시 사고 나서 팔아야 함)
-
+<br>
      
 ```python
 def solution(prices):
@@ -294,7 +297,9 @@ def solution(prices):
 ## 2025.03.09(화)     
          
 <br>      
-순서쌍2  
+순서쌍2
+<br>
+
      
 ```python
 def solution(n):
@@ -311,6 +316,7 @@ def solution(n):
          
 <br>      
 순서쌍2  
+<br>
      
 ```python
 def solution(n):
@@ -326,6 +332,7 @@ def solution(n):
          
 <br>      
 순서쌍2  
+<br>
      
 ```python
 def solution(n):
