@@ -134,15 +134,19 @@ def solution(A, B, X):
 ## 2025.04.15(화)     
              
 <br>        
-순서쌍2    
+빈 배열 추가하기    
 <br>       
 
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
+def solution(arr, flag):
+    answer = []
+    for i in range(len(arr)):
+        if flag[i]:
+            for j in range(arr[i]*2):
+                answer.append(arr[i])
+        else:
+            for j in range(arr[i]):
+                answer.pop()
     return answer
 ```
 
@@ -193,15 +197,24 @@ def solution(root):
 ## 2025.04.11(금)     
              
 <br>        
-순서쌍2    
+카페 자동화 키오스크   
 <br>
 
 ```python
-def solution(n):
+def solution(order):
     answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
+    # 1. 차가운것 뜨거운것 상관 없이 아메리카노인지 카페라떼인지 중요
+    # 2. anything -> 아메리카노
+    #    americano in -> 아메리카노
+    #    cafelatte in -> 라떼
+
+    for item in order:
+        if 'americano' in item:
+            answer += 4500
+        elif 'cafelatte' in item:
+            answer += 5000
+        elif 'anything' in item:
+            answer += 4500
     return answer
 ```
                    
@@ -231,16 +244,29 @@ def solution(prices):
 ## 2025.03.22(토)     
          
 <br>      
-순서쌍2  
+날짜 비교하기
+
 <br>    
 
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(date1, date2):
+    
+    if date1[0] > date2[0]:
+        return 0
+    elif date1[0] < date2[0]:
+        return 1
+    elif date1[0] == date2[0]:
+        if date1[1] > date2[1]:
+            return 0
+        elif date1[1] < date2[1]:
+            return 1
+        elif date1[1] == date2[1]:
+            if date1[2] > date2[2]:
+                return 0
+            elif date1[2] < date2[2]:
+                return 1
+            elif date1[2] == date2[2]:
+                return 0
 ```
 
     
@@ -297,16 +323,25 @@ def solution(prices):
 ## 2025.03.09(화)     
          
 <br>      
-순서쌍2
+카페 사장님
 <br>
 
      
 ```python
-def solution(n):
+def solution(order):
     answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
+    # 1. 차가운것 뜨거운것 상관 없이 아메리카노인지 카페라떼인지 중요
+    # 2. anything -> 아메리카노
+    #    americano in -> 아메리카노
+    #    cafelatte in -> 라떼
+
+    for item in order:
+        if 'americano' in item:
+            answer += 4500
+        elif 'cafelatte' in item:
+            answer += 5000
+        elif 'anything' in item:
+            answer += 4500
     return answer
 ```
 
@@ -315,39 +350,53 @@ def solution(n):
 ## 2025.03.09(일)     
          
 <br>      
-순서쌍2  
+마지막 콘서트  
 <br>
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(s):
+    n = len(s)
+    result = ""
+    
+    for i in range(n):
+        for j in range(i, n):
+            substr = s[i:j+1]
+            if substr == substr[::-1] and len(substr) > len(result):
+                result = substr
+    return result
+
 ```
 
   
 ## 2025.03.08(토)     
          
 <br>      
-순서쌍2  
+델타 순회
 <br>
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
 ```
 
   
 ## 2025.03.06(금)     
          
 <br>      
-순서쌍2  
+짝짓기  
      
 ```python
 def solution(n):
@@ -362,15 +411,27 @@ def solution(n):
 ## 2025.03.04(수)     
          
 <br>      
-순서쌍2  
+Date 함수  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(date1, date2):
+    
+    if date1[0] > date2[0]:
+        return 0
+    elif date1[0] < date2[0]:
+        return 1
+    elif date1[0] == date2[0]:
+        if date1[1] > date2[1]:
+            return 0
+        elif date1[1] < date2[1]:
+            return 1
+        elif date1[1] == date2[1]:
+            if date1[2] > date2[2]:
+                return 0
+            elif date1[2] < date2[2]:
+                return 1
+            elif date1[2] == date2[2]:
+                return 0
 ```
 
 
@@ -378,14 +439,30 @@ def solution(n):
 ## 2025.03.03(화)     
          
 <br>      
-순서쌍2  
+무작위로 K개 수 추첨 
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
+def solution(arr, k):
+    answer = []
+    leng = len(arr)
+
+    for i in range(leng):
+        if i == 0:
+            answer.append(arr[i])
+        else:
+            flag = True
+            for j in range(len(answer)):
+                if arr[i] == answer[j]:
+                    print('같은값 : ', arr[i])
+                    flag = False
+                    break
+            if flag:
+                answer.append(arr[i])
+        if len(answer) == k:
+            break
+    if len(answer) < k:
+        for i in range(k-len(answer)):
+            answer.append(-1)
     return answer
 ```
 
@@ -393,15 +470,24 @@ def solution(n):
 ## 2025.03.03(월)     
          
 <br>      
-순서쌍2  
+그리드1  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
 ```
 
  
@@ -410,15 +496,24 @@ def solution(n):
 ## 2025.03.02(일)     
          
 <br>      
-순서쌍2  
+범위 찾기 
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
 ```
 
 
@@ -444,12 +539,16 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(s):
+    n = len(s)
+    result = ""
+    
+    for i in range(n):
+        for j in range(i, n):
+            substr = s[i:j+1]
+            if substr == substr[::-1] and len(substr) > len(result):
+                result = substr
+    return result
 ```
 
 
@@ -461,12 +560,21 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
 ```
 
  
@@ -510,11 +618,25 @@ def solution(n):
      
 ```python
 def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+    arr = [[0 for _ in range(n)] for _ in range(n)]
+    x = 0
+    y = 0
+    num = 1
+    delta = 0
+    direction = [[0,1],[1,0],[0,-1],[-1,0]]
+    print(arr[x][y])
+    for _ in range(n*n):
+        arr[x][y] = num
+        nextX = x + direction[delta][0]
+        nextY = y + direction[delta][1]
+        if nextX >= n or nextY >= n or nextX < 0 or nextY < 0 or arr[nextX][nextY]:
+            delta = (delta+1)%4
+            nextX = x + direction[delta][0]
+            nextY = y + direction[delta][1]
+        x = nextX
+        y = nextY
+        num += 1
+    return arr
 ```
 
 
@@ -542,12 +664,21 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
 ```
 
 
@@ -559,12 +690,16 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def solution(root):
+    if not root:
+        return 0
+    return 1 + max(solution(root.left), solution(root.right))
 ```
 
 
@@ -590,12 +725,16 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def solution(root):
+    if not root:
+        return 0
+    return 1 + max(solution(root.left), solution(root.right))
 ```
 
 
@@ -605,12 +744,21 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
 ```
 
 
@@ -636,12 +784,16 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def solution(root):
+    if not root:
+        return 0
+    return 1 + max(solution(root.left), solution(root.right))
 ```
 
 
@@ -668,12 +820,21 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
 ```
 
 
@@ -684,12 +845,16 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def solution(root):
+    if not root:
+        return 0
+    return 1 + max(solution(root.left), solution(root.right))
 ```
 
 
@@ -731,12 +896,16 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def solution(root):
+    if not root:
+        return 0
+    return 1 + max(solution(root.left), solution(root.right))
 ```
 
 
@@ -749,11 +918,25 @@ def solution(n):
      
 ```python
 def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+    arr = [[0 for _ in range(n)] for _ in range(n)]
+    x = 0
+    y = 0
+    num = 1
+    delta = 0
+    direction = [[0,1],[1,0],[0,-1],[-1,0]]
+    print(arr[x][y])
+    for _ in range(n*n):
+        arr[x][y] = num
+        nextX = x + direction[delta][0]
+        nextY = y + direction[delta][1]
+        if nextX >= n or nextY >= n or nextX < 0 or nextY < 0 or arr[nextX][nextY]:
+            delta = (delta+1)%4
+            nextX = x + direction[delta][0]
+            nextY = y + direction[delta][1]
+        x = nextX
+        y = nextY
+        num += 1
+    return arr
 ```
 
 
@@ -797,11 +980,25 @@ def solution(n):
      
 ```python
 def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+    arr = [[0 for _ in range(n)] for _ in range(n)]
+    x = 0
+    y = 0
+    num = 1
+    delta = 0
+    direction = [[0,1],[1,0],[0,-1],[-1,0]]
+    print(arr[x][y])
+    for _ in range(n*n):
+        arr[x][y] = num
+        nextX = x + direction[delta][0]
+        nextY = y + direction[delta][1]
+        if nextX >= n or nextY >= n or nextX < 0 or nextY < 0 or arr[nextX][nextY]:
+            delta = (delta+1)%4
+            nextX = x + direction[delta][0]
+            nextY = y + direction[delta][1]
+        x = nextX
+        y = nextY
+        num += 1
+    return arr
 ```
 
 
@@ -829,12 +1026,16 @@ def solution(n):
 순서쌍2  
      
 ```python
-def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def solution(root):
+    if not root:
+        return 0
+    return 1 + max(solution(root.left), solution(root.right))
 ```
 
 
@@ -864,11 +1065,25 @@ def solution(n):
      
 ```python
 def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+    arr = [[0 for _ in range(n)] for _ in range(n)]
+    x = 0
+    y = 0
+    num = 1
+    delta = 0
+    direction = [[0,1],[1,0],[0,-1],[-1,0]]
+    print(arr[x][y])
+    for _ in range(n*n):
+        arr[x][y] = num
+        nextX = x + direction[delta][0]
+        nextY = y + direction[delta][1]
+        if nextX >= n or nextY >= n or nextX < 0 or nextY < 0 or arr[nextX][nextY]:
+            delta = (delta+1)%4
+            nextX = x + direction[delta][0]
+            nextY = y + direction[delta][1]
+        x = nextX
+        y = nextY
+        num += 1
+    return arr
 ```
 
 
@@ -973,11 +1188,25 @@ def solution(n):
      
 ```python
 def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+    arr = [[0 for _ in range(n)] for _ in range(n)]
+    x = 0
+    y = 0
+    num = 1
+    delta = 0
+    direction = [[0,1],[1,0],[0,-1],[-1,0]]
+    print(arr[x][y])
+    for _ in range(n*n):
+        arr[x][y] = num
+        nextX = x + direction[delta][0]
+        nextY = y + direction[delta][1]
+        if nextX >= n or nextY >= n or nextX < 0 or nextY < 0 or arr[nextX][nextY]:
+            delta = (delta+1)%4
+            nextX = x + direction[delta][0]
+            nextY = y + direction[delta][1]
+        x = nextX
+        y = nextY
+        num += 1
+    return arr
 ```
 
 
@@ -1077,15 +1306,29 @@ def solution(n):
 ## 2025.01.15(목)     
          
 <br>     
-순서쌍2  
+나선형 계단1 
      
 ```python
 def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+    arr = [[0 for _ in range(n)] for _ in range(n)]
+    x = 0
+    y = 0
+    num = 1
+    delta = 0
+    direction = [[0,1],[1,0],[0,-1],[-1,0]]
+    print(arr[x][y])
+    for _ in range(n*n):
+        arr[x][y] = num
+        nextX = x + direction[delta][0]
+        nextY = y + direction[delta][1]
+        if nextX >= n or nextY >= n or nextX < 0 or nextY < 0 or arr[nextX][nextY]:
+            delta = (delta+1)%4
+            nextX = x + direction[delta][0]
+            nextY = y + direction[delta][1]
+        x = nextX
+        y = nextY
+        num += 1
+    return arr
 ```
 
   
@@ -1155,22 +1398,36 @@ def solution(n):
 ## 2025.01.03(토)     
          
 <br>     
-순서쌍2  
+2차원 메트릭스  
      
 ```python
 def solution(n):
-    answer = 0
-    for i in range(1,n+1):
-        if n%i == 0:  
-            answer += 1. 
-    return answer
+    arr = [[0 for _ in range(n)] for _ in range(n)]
+    x = 0
+    y = 0
+    num = 1
+    delta = 0
+    direction = [[0,1],[1,0],[0,-1],[-1,0]]
+    print(arr[x][y])
+    for _ in range(n*n):
+        arr[x][y] = num
+        nextX = x + direction[delta][0]
+        nextY = y + direction[delta][1]
+        if nextX >= n or nextY >= n or nextX < 0 or nextY < 0 or arr[nextX][nextY]:
+            delta = (delta+1)%4
+            nextX = x + direction[delta][0]
+            nextY = y + direction[delta][1]
+        x = nextX
+        y = nextY
+        num += 1
+    return arr
 ```
 
  
 ## 2025.01.03(금)     
          
 <br>     
-순서쌍2  
+최적해3  
      
 ```python
 def solution(n):
