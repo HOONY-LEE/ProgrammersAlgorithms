@@ -260,19 +260,26 @@ def solution(order):
 ## 2025.03.25(화)     
              
 <br>
-주식을 사고팔기 가장 좋은 시점** 정수 배열 `prices`가 주어질 때, 하루에 한 주씩 사고팔 수 있다고 했을 때, 가장 큰 이익을 반환하세요. (단, 반드시 사고 나서 팔아야 함)
+n개의 컴퓨터가 있고 computers[i][j] == 1이면 i번 컴퓨터와 j번 컴퓨터가 직접 연결되어 있다. 네트워크(서로 연결된 컴퓨터들)의 개수를 구하시오.
 <br>
      
 ```python
-def solution(prices):
-    min_price = float('inf')
-    max_profit = 0
+def solution(n, computers):
+    visited = [False] * n
     
-    for price in prices:
-        min_price = min(min_price, price)
-        max_profit = max(max_profit, price - min_price)
+    def dfs(x):
+        visited[x] = True
+        for i in range(n):
+            if computers[x][i] == 1 and not visited[i]:
+                dfs(i)
     
-    return max_profit
+    count = 0
+    for i in range(n):
+        if not visited[i]:
+            dfs(i)
+            count += 1
+    return count
+
 
 ```
    
@@ -361,26 +368,33 @@ def solution(prices):
 ## 2025.03.09(화)     
          
 <br>      
-카페 사장님
+노드 개수 n, 간선 리스트 edges, 시작 노드 start가 주어질 때, 각 노드까지의 최단 거리를 리스트로 반환하시오.
 <br>
 
      
 ```python
-def solution(order):
-    answer = 0
-    # 1. 차가운것 뜨거운것 상관 없이 아메리카노인지 카페라떼인지 중요
-    # 2. anything -> 아메리카노
-    #    americano in -> 아메리카노
-    #    cafelatte in -> 라떼
+import heapq
 
-    for item in order:
-        if 'americano' in item:
-            answer += 4500
-        elif 'cafelatte' in item:
-            answer += 5000
-        elif 'anything' in item:
-            answer += 4500
-    return answer
+def dijkstra(n, edges, start):
+    graph = [[] for _ in range(n + 1)]
+    for u, v, w in edges:
+        graph[u].append((v, w))
+    
+    distance = [float('inf')] * (n + 1)
+    distance[start] = 0
+    heap = [(0, start)]
+    
+    while heap:
+        dist, now = heapq.heappop(heap)
+        if dist > distance[now]:
+            continue
+        for neighbor, cost in graph[now]:
+            if distance[neighbor] > dist + cost:
+                distance[neighbor] = dist + cost
+                heapq.heappush(heap, (dist + cost, neighbor))
+    
+    return distance[1:]  # 0번 노드는 무시
+
 ```
 
 
@@ -388,21 +402,23 @@ def solution(order):
 ## 2025.03.09(일)     
          
 <br>      
-마지막 콘서트  
+문자열 s가 주어질 때, 중복 문자가 없는 가장 긴 부분 문자열의 길이를 구하시오. 
 <br>
      
 ```python
-def solution(s):
-    n = len(s)
-    result = ""
+def lengthOfLongestSubstring(s):
+    char_set = set()
+    left = 0
+    max_len = 0
     
-    for i in range(n):
-        for j in range(i, n):
-            substr = s[i:j+1]
-            if substr == substr[::-1] and len(substr) > len(result):
-                result = substr
-    return result
-
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        max_len = max(max_len, right - left + 1)
+    
+    return max_len
 ```
 
   
