@@ -1,7 +1,45 @@
               
 # ProgrammersAlgorithms
 
-## 2025.04.25(금). 
+
+
+
+## 2025.04.26(토) 
+ 
+<br>
+섬의 개수 (DFS/BFS)
+2차원 배열 grid가 주어질 때, 1은 육지, 0은 바다를 의미한다. 상하좌우로 연결된 육지 덩어리의 개수를 구하시오.
+<br>
+     
+```python
+def numIslands(grid):
+    if not grid:
+        return 0
+    
+    n, m = len(grid), len(grid[0])
+    visited = [[False]*m for _ in range(n)]
+    
+    def dfs(x, y):
+        if x < 0 or x >= n or y < 0 or y >= m or visited[x][y] or grid[x][y] == '0':
+            return
+        visited[x][y] = True
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x + dx, y + dy)
+    
+    count = 0
+    for i in range(n):
+        for j in range(m):
+            if grid[i][j] == '1' and not visited[i][j]:
+                dfs(i, j)
+                count += 1
+    return count
+
+```
+
+
+
+
+## 2025.04.25(금) 
  
 <br>
 가장 긴 팰린드롬 부분 문자열** 문자열 `s`가 주어졌을 때, `s`의 부분 문자열 중 가장 긴 팰린드롬을 구하세요. 예시 입력: `"babad"` → 출력: `"bab"` 또는 `"aba"`
