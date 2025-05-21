@@ -8,7 +8,7 @@
 주식을 사고팔기 가장 좋은 시점** 정수 배열 `prices`가 주어질 때, 하루에 한 주씩 사고팔 수 있다고 했을 때, 가장 큰 이익을 반환하세요. (단, 반드시 사고 나서 팔아야 함)
 <br>
      
-```python
+```python   
 def solution(prices):
     min_price = float('inf')
     max_profit = 0
