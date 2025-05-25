@@ -1,5 +1,32 @@
               
 # ProgrammersAlgorithms
+
+
+## 2025.05.25(일)     
+             
+<br>
+n개의 컴퓨터가 있고 computers[i][j] == 1이면 i번 컴퓨터와 j번 컴퓨터가 직접 연결되어 있다. 네트워크(서로 연결된 컴퓨터들)의 개수를 구하시오.
+<br>
+     
+```python
+def solution(n, computers):
+    visited = [False] * n
+    
+    def dfs(x):
+        visited[x] = True
+        for i in range(n):
+            if computers[x][i] == 1 and not visited[i]:
+                dfs(i)
+    
+    count = 0
+    for i in range(n):
+        if not visited[i]:
+            dfs(i)
+            count += 1
+    return count
+
+
+```
     
                 
 ## 2025.05.14(수)       
