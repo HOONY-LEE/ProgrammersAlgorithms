@@ -10,7 +10,7 @@ n개의 컴퓨터가 있고 computers[i][j] == 1이면 i번 컴퓨터와 j번 �
      
 ```python
 def solution(n, computers):
-    visited = [False] * n
+    visited = [False] * n  
     
     def dfs(x):
         visited[x] = True
