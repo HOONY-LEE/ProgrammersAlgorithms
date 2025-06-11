@@ -1,6 +1,56 @@
               
 # ProgrammersAlgorithms
                
+
+
+## 2025.06.11(수)     
+         
+<br>      
+문자열 s가 주어질 때, 중복 문자가 없는 가장 긴 부분 문자열의 길이를 구하시오. 
+<br>
+     
+```python
+def lengthOfLongestSubstring(s):
+    char_set = set()
+    left = 0
+    max_len = 0
+    
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        max_len = max(max_len, right - left + 1)
+    
+    return max_len
+```
+
+  
+## 2025.06.09(월)     
+         
+<br>      
+델타 순회
+<br>
+     
+```python
+def solution(grid):
+    def dfs(x, y):
+        if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
+            return
+        grid[x][y] = '0'
+        for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+            dfs(x+dx, y+dy)
+    
+    count = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == '1':
+                dfs(i, j)
+                count += 1
+    return count
+```
+
+
                
 ## 2025.05.25(일)       
                    
