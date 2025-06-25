@@ -1,6 +1,29 @@
               
 # ProgrammersAlgorithms
-                   
+
+
+                       
+## 2025.06.25(수)       
+             
+<br>        
+문자열 s가 주어질 때, 중복 문자가 없는 가장 긴 부분 문자열의 길이를 구하시오. 
+<br>
+     
+```python
+def lengthOfLongestSubstring(s):
+    char_set = set()
+    left = 0
+    max_len = 0
+    
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        max_len = max(max_len, right - left + 1)
+    
+    return max_len
+```
                
     
 ## 2025.06.11(수)       
