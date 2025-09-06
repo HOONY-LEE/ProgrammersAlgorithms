@@ -8,7 +8,7 @@
 <br>                      
 문자열 s가 주어질 때, 중복 문자가 없는 가장 긴 부분 문자열의 길이를 구하시오. 
 <br>
-       
+          
 ```python
 def lengthOfLongestSubstring(s):
     char_set = set()
