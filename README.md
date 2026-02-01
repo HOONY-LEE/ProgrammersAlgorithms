@@ -9,7 +9,7 @@
 <br>. 
                          
 ```python
-def lengthOfLongestSubstring(s):     
+def lengthOfLongestSubstring(s):        
     char_set = set()
     left = 0 
     max_len = 0. 
