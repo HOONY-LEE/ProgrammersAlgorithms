@@ -18,12 +18,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install anthropic
-
       - name: Generate algorithm and update README
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/generate_algorithm.py
 
       - name: Commit and push
