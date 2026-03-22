@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.MY_PAT }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -25,8 +27,8 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "HOONY-LEE"
+          git config user.email "leesh940312@gmail.com"
           git add README.md
           git diff --cached --quiet || git commit -m "$(python -c "from datetime import datetime; from zoneinfo import ZoneInfo; print('알고리즘 ' + datetime.now(ZoneInfo('Asia/Seoul')).strftime('%Y.%m.%d'))")"
           git push
