@@ -1,5 +1,26 @@
                                                                                                                                                                                                                                                   
 # ProgrammersAlgorithms                                                     
+##2026.03.23(월)
+
+<br>.
+**숫자를 로마 숫자로 변환**
+1~3999 사이의 정수를 로마 숫자 문자열로 변환하는 함수를 작성하시오.
+로마 숫자: I=1, V=5, X=10, L=50, C=100, D=500, M=1000
+입력: num = 1994 → 출력: 'MCMXCIV'
+<br>.
+
+```python
+def int_to_roman(num):
+    vals = [1000,900,500,400,100,90,50,40,10,9,5,4,1]
+    syms = ['M','CM','D','CD','C','XC','L','XL','X','IX','V','IV','I']
+    result = ''
+    for v, s in zip(vals, syms):
+        while num >= v:
+            result += s
+            num -= v
+    return result
+```
+
 ##2026.03.22(일)
 
 <br>.
