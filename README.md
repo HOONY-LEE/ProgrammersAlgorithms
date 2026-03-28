@@ -1,5 +1,26 @@
                                                                                                                                                                                                                                                   
 # ProgrammersAlgorithms                                                     
+##2026.03.28(토)
+
+<br>.
+**오름차순 정렬된 배열에서 중복 제거**
+오름차순 정렬된 배열에서 중복을 in-place로 제거하고, 고유한 원소의 개수를 반환하시오.
+추가 메모리를 사용하지 않고 투 포인터로 구현하시오.
+입력: nums = [0,0,1,1,1,2,2,3,3,4] → 출력: 5 (nums = [0,1,2,3,4,...])
+<br>.
+
+```python
+def remove_duplicates(nums):
+    if not nums:
+        return 0
+    k = 1
+    for i in range(1, len(nums)):
+        if nums[i] != nums[i-1]:
+            nums[k] = nums[i]
+            k += 1
+    return k
+```
+
 ##2026.03.27(금)
 
 <br>.
