@@ -1,5 +1,19 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.02(목)
+
+<br>.
+**배열의 최댓값 인덱스**
+정수 배열에서 최댓값이 처음 등장하는 인덱스를 반환하시오.
+배열은 비어있지 않으며 정수로만 구성됩니다.
+입력: nums = [3, 1, 4, 1, 5, 9, 2, 6] → 출력: 5
+<br>.
+
+```python
+def max_index(nums):
+    return nums.index(max(nums))
+```
+
 ##2026.04.01(수)
 
 <br>.
