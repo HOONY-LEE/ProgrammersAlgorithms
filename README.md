@@ -1,5 +1,24 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.04(토)
+
+<br>.
+**문자열 뒤집기**
+문자 배열 s가 주어질 때, 배열을 in-place로 뒤집으시오. 추가 메모리를 O(1)만 사용해야 합니다.
+투 포인터 방식으로 구현하시오.
+입력: s = ['h','e','l','l','o'] → 출력: ['o','l','l','e','h']
+<br>.
+
+```python
+def reverse_string(s):
+    left, right = 0, len(s) - 1
+    while left < right:
+        s[left], s[right] = s[right], s[left]
+        left += 1
+        right -= 1
+    return s
+```
+
 ##2026.04.03(금)
 
 <br>.
