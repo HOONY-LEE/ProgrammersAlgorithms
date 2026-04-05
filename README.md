@@ -1,5 +1,27 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.05(일)
+
+<br>.
+**문자열 압축**
+문자열에서 연속된 같은 문자를 '문자+개수' 형태로 압축하시오. 압축 결과가 원본보다 길면 원본을 반환합니다.
+입력: s = 'aabcccccaaa' → 출력: 'a2b1c5a3'
+입력: s = 'abcde' → 출력: 'abcde' (압축이 더 길어서)
+<br>.
+
+```python
+def compress(s):
+    result = ''
+    i = 0
+    while i < len(s):
+        count = 1
+        while i + count < len(s) and s[i + count] == s[i]:
+            count += 1
+        result += s[i] + str(count)
+        i += count
+    return result if len(result) < len(s) else s
+```
+
 ##2026.04.04(토)
 
 <br>.
