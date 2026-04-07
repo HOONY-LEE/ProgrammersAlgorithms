@@ -1,5 +1,24 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.07(화)
+
+<br>.
+**주식 최대 이익**
+주가 배열 prices가 주어질 때, 한 번 사고 팔아서 얻을 수 있는 최대 이익을 반환하시오.
+이익이 없으면 0을 반환합니다. 반드시 사는 날이 파는 날보다 앞서야 합니다.
+입력: prices = [7,1,5,3,6,4] → 출력: 5
+<br>.
+
+```python
+def max_profit(prices):
+    min_price = float('inf')
+    max_profit = 0
+    for p in prices:
+        min_price = min(min_price, p)
+        max_profit = max(max_profit, p - min_price)
+    return max_profit
+```
+
 ##2026.04.06(월)
 
 <br>.
