@@ -1,5 +1,23 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.08(수)
+
+<br>.
+**연속 부분 배열의 최대 합 (카데인 알고리즘)**
+정수 배열에서 연속된 부분 배열의 합이 최대가 되는 값을 반환하시오.
+카데인(Kadane) 알고리즘을 사용하면 O(n)에 해결할 수 있습니다.
+입력: nums = [-2,1,-3,4,-1,2,1,-5,4] → 출력: 6
+<br>.
+
+```python
+def max_subarray(nums):
+    max_sum = curr = nums[0]
+    for n in nums[1:]:
+        curr = max(n, curr + n)
+        max_sum = max(max_sum, curr)
+    return max_sum
+```
+
 ##2026.04.07(화)
 
 <br>.
