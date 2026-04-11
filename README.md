@@ -1,5 +1,23 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.11(토)
+
+<br>.
+**배열 회전**
+정수 배열 nums를 오른쪽으로 k번 회전시키시오. in-place로 구현해야 합니다.
+뒤집기(reverse) 세 번으로 O(n) 시간, O(1) 공간에 해결할 수 있습니다.
+입력: nums = [1,2,3,4,5,6,7], k = 3 → 출력: [5,6,7,1,2,3,4]
+<br>.
+
+```python
+def rotate(nums, k):
+    n = len(nums)
+    k %= n
+    nums.reverse()
+    nums[:k] = nums[:k][::-1]
+    nums[k:] = nums[k:][::-1]
+```
+
 ##2026.04.10(금)
 
 <br>.
