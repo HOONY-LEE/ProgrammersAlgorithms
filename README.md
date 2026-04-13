@@ -1,5 +1,28 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.13(월)
+
+<br>.
+**이진 탐색**
+오름차순으로 정렬된 정수 배열 nums에서 target의 인덱스를 반환하시오. 없으면 -1을 반환합니다.
+반드시 O(log n) 시간복잡도로 구현하시오.
+입력: nums = [-1,0,3,5,9,12], target = 9 → 출력: 4
+<br>.
+
+```python
+def binary_search(nums, target):
+    left, right = 0, len(nums) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+```
+
 ##2026.04.12(일)
 
 <br>.
