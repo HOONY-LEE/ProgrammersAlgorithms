@@ -1,5 +1,28 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.14(화)
+
+<br>.
+**중복 없는 가장 긴 부분 문자열**
+문자열 s가 주어질 때, 중복 문자가 없는 가장 긴 부분 문자열의 길이를 구하시오.
+슬라이딩 윈도우 기법을 활용하면 효율적으로 풀 수 있습니다.
+입력: s = 'abcabcbb' → 출력: 3 ('abc')
+<br>.
+
+```python
+def length_of_longest_substring(s):
+    char_set = set()
+    left = 0
+    max_len = 0
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        max_len = max(max_len, right - left + 1)
+    return max_len
+```
+
 ##2026.04.13(월)
 
 <br>.
