@@ -1,5 +1,23 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.15(수)
+
+<br>.
+**행렬 나선형 순회**
+m×n 행렬이 주어질 때, 나선형(spiral) 순서로 모든 원소를 반환하시오.
+경계를 좁혀가며 순회하는 방식으로 구현합니다.
+입력: [[1,2,3],[4,5,6],[7,8,9]] → 출력: [1,2,3,6,9,8,7,4,5]
+<br>.
+
+```python
+def spiral_order(matrix):
+    result = []
+    while matrix:
+        result += matrix.pop(0)
+        matrix = list(zip(*matrix))[::-1]
+    return result
+```
+
 ##2026.04.14(화)
 
 <br>.
