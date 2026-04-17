@@ -1,5 +1,22 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.17(금)
+
+<br>.
+**유일한 원소 찾기**
+정수 배열에서 딱 한 번만 등장하는 원소를 반환하시오. 나머지 원소는 모두 두 번씩 등장합니다.
+XOR 비트 연산을 활용하면 O(n) 시간, O(1) 공간으로 풀 수 있습니다.
+입력: nums = [4,1,2,1,2] → 출력: 4
+<br>.
+
+```python
+def single_number(nums):
+    result = 0
+    for n in nums:
+        result ^= n
+    return result
+```
+
 ##2026.04.16(목)
 
 <br>.
