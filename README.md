@@ -1,5 +1,27 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.18(토)
+
+<br>.
+**최장 공통 접두사**
+문자열 배열에서 모든 문자열의 공통 접두사(prefix) 중 가장 긴 것을 반환하시오.
+공통 접두사가 없으면 빈 문자열을 반환합니다.
+입력: strs = ['flower','flow','flight'] → 출력: 'fl'
+<br>.
+
+```python
+def longest_common_prefix(strs):
+    if not strs:
+        return ''
+    prefix = strs[0]
+    for s in strs[1:]:
+        while not s.startswith(prefix):
+            prefix = prefix[:-1]
+            if not prefix:
+                return ''
+    return prefix
+```
+
 ##2026.04.17(금)
 
 <br>.
