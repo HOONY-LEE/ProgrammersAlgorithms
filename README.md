@@ -1,5 +1,31 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.19(일)
+
+<br>.
+**연결 리스트 뒤집기**
+단방향 연결 리스트의 헤드가 주어질 때, 리스트를 뒤집어서 새 헤드를 반환하시오.
+in-place로 O(n) 시간, O(1) 공간에 구현하시오.
+입력: 1->2->3->4->5 → 출력: 5->4->3->2->1
+<br>.
+
+```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def reverse_list(head):
+    prev = None
+    curr = head
+    while curr:
+        nxt = curr.next
+        curr.next = prev
+        prev = curr
+        curr = nxt
+    return prev
+```
+
 ##2026.04.18(토)
 
 <br>.
