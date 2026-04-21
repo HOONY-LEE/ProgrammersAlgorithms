@@ -1,5 +1,24 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.21(화)
+
+<br>.
+**소수 판별**
+주어진 정수 n이 소수인지 판별하는 함수를 작성하시오.
+에라토스테네스의 체 원리를 응용하여 O(√n) 시간 내에 풀 수 있습니다.
+입력: n = 17 → 출력: True
+<br>.
+
+```python
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+```
+
 ##2026.04.20(월)
 
 <br>.
