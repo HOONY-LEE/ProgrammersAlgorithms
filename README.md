@@ -1,5 +1,28 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.22(수)
+
+<br>.
+**두 정렬 배열 병합**
+오름차순으로 정렬된 두 배열 nums1(크기 m+n), nums2(크기 n)를 병합하여 nums1에 정렬된 상태로 저장하시오.
+nums1의 뒤쪽 n개 원소는 0으로 채워져 있습니다. in-place, 역방향 투 포인터로 풀 수 있습니다.
+입력: nums1=[1,2,3,0,0,0] m=3, nums2=[2,5,6] n=3 → 출력: [1,2,2,3,5,6]
+<br>.
+
+```python
+def merge(nums1, m, nums2, n):
+    i, j, k = m - 1, n - 1, m + n - 1
+    while i >= 0 and j >= 0:
+        if nums1[i] > nums2[j]:
+            nums1[k] = nums1[i]
+            i -= 1
+        else:
+            nums1[k] = nums2[j]
+            j -= 1
+        k -= 1
+    nums1[:j+1] = nums2[:j+1]
+```
+
 ##2026.04.21(화)
 
 <br>.
