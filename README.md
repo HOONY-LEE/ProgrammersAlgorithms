@@ -1,5 +1,35 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.24(금)
+
+<br>.
+**LRU 캐시 구현**
+LRU(Least Recently Used) 캐시를 구현하시오. get(key)와 put(key, value) 연산을 지원해야 합니다.
+두 연산 모두 O(1) 시간복잡도로 동작해야 합니다.
+캐시 용량이 초과되면 가장 오래 사용하지 않은 항목을 제거합니다.
+<br>.
+
+```python
+from collections import OrderedDict
+class LRUCache:
+    def __init__(self, capacity):
+        self.cap = capacity
+        self.cache = OrderedDict()
+
+    def get(self, key):
+        if key not in self.cache:
+            return -1
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key, value):
+        if key in self.cache:
+            self.cache.move_to_end(key)
+        self.cache[key] = value
+        if len(self.cache) > self.cap:
+            self.cache.popitem(last=False)
+```
+
 ##2026.04.23(목)
 
 <br>.
