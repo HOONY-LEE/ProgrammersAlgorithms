@@ -1,5 +1,23 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.27(월)
+
+<br>.
+**두 수의 합**
+정수 배열 nums와 목표값 target이 주어질 때, 합이 target이 되는 두 원소의 인덱스를 반환하시오.
+각 입력에는 정확히 하나의 답이 존재하며, 같은 원소를 두 번 사용할 수 없습니다.
+입력: nums = [2, 7, 11, 15], target = 9 → 출력: [0, 1]
+<br>.
+
+```python
+def two_sum(nums, target):
+    seen = {}
+    for i, n in enumerate(nums):
+        if target - n in seen:
+            return [seen[target - n], i]
+        seen[n] = i
+```
+
 ##2026.04.26(일)
 
 <br>.
