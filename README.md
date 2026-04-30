@@ -1,5 +1,24 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.04.30(목)
+
+<br>.
+**행렬 90도 회전**
+n×n 정수 행렬이 주어질 때, in-place로 시계 방향 90도 회전시키시오.
+전치(transpose) 후 각 행을 뒤집는 방식으로 구현할 수 있습니다.
+입력: [[1,2,3],[4,5,6],[7,8,9]] → 출력: [[7,4,1],[8,5,2],[9,6,3]]
+<br>.
+
+```python
+def rotate(matrix):
+    n = len(matrix)
+    for i in range(n):
+        for j in range(i+1, n):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    for row in matrix:
+        row.reverse()
+```
+
 ##2026.04.29(수)
 
 <br>.
