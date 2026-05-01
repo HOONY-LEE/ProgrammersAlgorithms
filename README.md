@@ -1,5 +1,34 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.05.01(금)
+
+<br>.
+**빗물 트래핑**
+지형의 높이를 나타내는 배열이 주어질 때, 비가 온 후 고이는 빗물의 총량을 구하시오.
+투 포인터 방식으로 O(n) 시간, O(1) 공간에 해결할 수 있습니다.
+입력: height = [0,1,0,2,1,0,1,3,2,1,2,1] → 출력: 6
+<br>.
+
+```python
+def trap(height):
+    left, right = 0, len(height) - 1
+    left_max = right_max = water = 0
+    while left < right:
+        if height[left] < height[right]:
+            if height[left] >= left_max:
+                left_max = height[left]
+            else:
+                water += left_max - height[left]
+            left += 1
+        else:
+            if height[right] >= right_max:
+                right_max = height[right]
+            else:
+                water += right_max - height[right]
+            right -= 1
+    return water
+```
+
 ##2026.04.30(목)
 
 <br>.
