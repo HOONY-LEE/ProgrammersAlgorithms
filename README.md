@@ -1,5 +1,20 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.05.02(토)
+
+<br>.
+**단어 빈도 카운트**
+문자열 배열 words가 주어질 때, 각 단어의 등장 횟수를 딕셔너리로 반환하시오.
+대소문자를 구분하지 않으며, 결과는 빈도 내림차순으로 정렬하시오.
+입력: words = ['apple','banana','apple','cherry','banana','apple'] → 출력: {'apple':3,'banana':2,'cherry':1}
+<br>.
+
+```python
+from collections import Counter
+def word_count(words):
+    return dict(Counter(w.lower() for w in words).most_common())
+```
+
 ##2026.05.01(금)
 
 <br>.
