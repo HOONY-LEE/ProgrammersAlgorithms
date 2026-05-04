@@ -1,5 +1,28 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.05.04(월)
+
+<br>.
+**유효한 괄호**
+괄호 문자 '(', ')', '{', '}', '[', ']'로 이루어진 문자열 s가 주어질 때, 올바른 괄호 문자열인지 판별하시오.
+열린 괄호는 반드시 같은 종류의 닫힌 괄호로 닫혀야 하며, 올바른 순서로 닫혀야 합니다.
+입력: s = '()[]{}' → 출력: True
+<br>.
+
+```python
+def is_valid(s):
+    stack = []
+    mapping = {')': '(', '}': '{', ']': '['}
+    for ch in s:
+        if ch in mapping:
+            if not stack or stack[-1] != mapping[ch]:
+                return False
+            stack.pop()
+        else:
+            stack.append(ch)
+    return not stack
+```
+
 ##2026.05.03(일)
 
 <br>.
