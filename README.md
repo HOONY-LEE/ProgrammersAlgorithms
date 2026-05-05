@@ -1,5 +1,20 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.05.05(화)
+
+<br>.
+**가장 많이 등장한 원소 K개**
+정수 배열 nums와 정수 k가 주어질 때, 가장 자주 등장하는 k개의 원소를 반환하시오.
+시간복잡도 O(n log n)보다 효율적으로 풀 수 있습니다.
+입력: nums = [1,1,1,2,2,3], k = 2 → 출력: [1, 2]
+<br>.
+
+```python
+from collections import Counter
+def top_k_frequent(nums, k):
+    return [x for x, _ in Counter(nums).most_common(k)]
+```
+
 ##2026.05.04(월)
 
 <br>.
