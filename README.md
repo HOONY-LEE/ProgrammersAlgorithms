@@ -1,5 +1,24 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.05.07(목)
+
+<br>.
+**피보나치 수열 (메모이제이션)**
+n번째 피보나치 수를 반환하는 함수를 작성하시오. (0번째: 0, 1번째: 1)
+단순 재귀 대신 메모이제이션을 사용하여 시간복잡도를 O(n)으로 줄이시오.
+입력: n = 10 → 출력: 55
+<br>.
+
+```python
+def fib(n, memo={}):
+    if n in memo:
+        return memo[n]
+    if n <= 1:
+        return n
+    memo[n] = fib(n - 1, memo) + fib(n - 2, memo)
+    return memo[n]
+```
+
 ##2026.05.06(수)
 
 <br>.
