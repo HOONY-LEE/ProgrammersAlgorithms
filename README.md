@@ -1,5 +1,19 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.05.08(금)
+
+<br>.
+**팰린드롬 판별**
+문자열이 팰린드롬(앞뒤로 읽어도 같은 문자열)인지 판별하시오.
+영문 소문자만 포함되며 공백은 없습니다.
+입력: s = 'racecar' → 출력: True
+<br>.
+
+```python
+def is_palindrome(s):
+    return s == s[::-1]
+```
+
 ##2026.05.07(목)
 
 <br>.
