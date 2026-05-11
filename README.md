@@ -1,5 +1,33 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.05.11(월)
+
+<br>.
+**유효한 스도쿠**
+9×9 스도쿠 보드가 주어질 때, 현재 채워진 숫자들이 규칙에 유효한지 판별하시오.
+각 행, 열, 3×3 박스에 1~9가 중복 없이 있어야 합니다. '.'은 빈 칸입니다.
+같은 행/열/박스에 같은 숫자가 있으면 False를 반환하시오.
+<br>.
+
+```python
+def is_valid_sudoku(board):
+    rows = [set() for _ in range(9)]
+    cols = [set() for _ in range(9)]
+    boxes = [set() for _ in range(9)]
+    for i in range(9):
+        for j in range(9):
+            val = board[i][j]
+            if val == '.':
+                continue
+            box_idx = (i // 3) * 3 + j // 3
+            if val in rows[i] or val in cols[j] or val in boxes[box_idx]:
+                return False
+            rows[i].add(val)
+            cols[j].add(val)
+            boxes[box_idx].add(val)
+    return True
+```
+
 ##2026.05.10(일)
 
 <br>.
