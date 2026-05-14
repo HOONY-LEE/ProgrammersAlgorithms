@@ -1,5 +1,23 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.05.14(목)
+
+<br>.
+**아나그램 그룹화**
+문자열 배열이 주어질 때, 아나그램끼리 같은 그룹으로 묶어 반환하시오.
+아나그램이란 문자의 순서를 바꿔 다른 단어를 만들 수 있는 단어들의 관계입니다.
+입력: strs = ['eat','tea','tan','ate','nat','bat'] → 출력: [['eat','tea','ate'],['tan','nat'],['bat']]
+<br>.
+
+```python
+from collections import defaultdict
+def group_anagrams(strs):
+    groups = defaultdict(list)
+    for s in strs:
+        groups[tuple(sorted(s))].append(s)
+    return list(groups.values())
+```
+
 ##2026.05.13(수)
 
 <br>.
