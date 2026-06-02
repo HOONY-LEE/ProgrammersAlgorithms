@@ -1,5 +1,36 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.06.02(화)
+
+<br>.
+**투 포인터: 정렬 배열에서 합이 0인 세 수**
+정수 배열에서 합이 0이 되는 세 원소의 조합을 모두 반환하시오. 중복 조합은 제외합니다.
+정렬 후 투 포인터 방식으로 O(n²)에 풀 수 있습니다.
+입력: nums = [-1,0,1,2,-1,-4] → 출력: [[-1,-1,2],[-1,0,1]]
+<br>.
+
+```python
+def three_sum(nums):
+    nums.sort()
+    result = []
+    for i in range(len(nums) - 2):
+        if i > 0 and nums[i] == nums[i-1]:
+            continue
+        l, r = i + 1, len(nums) - 1
+        while l < r:
+            s = nums[i] + nums[l] + nums[r]
+            if s == 0:
+                result.append([nums[i], nums[l], nums[r]])
+                while l < r and nums[l] == nums[l+1]: l += 1
+                while l < r and nums[r] == nums[r-1]: r -= 1
+                l += 1; r -= 1
+            elif s < 0:
+                l += 1
+            else:
+                r -= 1
+    return result
+```
+
 ##2026.06.01(월)
 
 <br>.
