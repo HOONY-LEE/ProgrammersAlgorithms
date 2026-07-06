@@ -1,5 +1,26 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.07.06(월)
+
+<br>.
+**완전 제곱수 최소 개수 (DP)**
+정수 n이 주어질 때, 합이 n이 되는 완전 제곱수(1, 4, 9, 16...)의 최소 개수를 반환하시오.
+동적 프로그래밍 또는 BFS로 풀 수 있습니다.
+입력: n = 12 → 출력: 3 (4+4+4)
+<br>.
+
+```python
+def num_squares(n):
+    dp = [float('inf')] * (n + 1)
+    dp[0] = 0
+    for i in range(1, n + 1):
+        j = 1
+        while j * j <= i:
+            dp[i] = min(dp[i], dp[i - j*j] + 1)
+            j += 1
+    return dp[n]
+```
+
 ##2026.07.05(일)
 
 <br>.
