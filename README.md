@@ -1,5 +1,24 @@
                                                                                                                                                                                                                                                     
 # ProgrammersAlgorithms                                                     
+##2026.07.07(화)
+
+<br>.
+**계단 오르기 (DP)**
+n개의 계단을 오르는데, 한 번에 1칸 또는 2칸씩 오를 수 있습니다. n개의 계단을 오르는 방법의 수를 구하시오.
+동적 프로그래밍 또는 피보나치 패턴으로 풀 수 있습니다.
+입력: n = 5 → 출력: 8
+<br>.
+
+```python
+def climb_stairs(n):
+    if n <= 2:
+        return n
+    a, b = 1, 2
+    for _ in range(3, n + 1):
+        a, b = b, a + b
+    return b
+```
+
 ##2026.07.06(월)
 
 <br>.
